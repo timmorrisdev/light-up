@@ -5,3 +5,10 @@ body {
     background-size: cover;
     height: 100vh; 
 }
+
+#map {
+    width: 600px;
+    height: 600px;
+    border: solid black 1px;
+    border-radius: .5rem;
+}
