@@ -12,3 +12,302 @@ body {
     border: solid black 1px;
     border-radius: .5rem;
 }
+
+h1 {
+    font-family: 'Quicksand', sans-serif;
+}
+
+#logo {
+    animation: flicker 0.8s 4;
+}
+
+#logo path {
+    stroke: #DD0303;
+}
+
+#logo {
+    -webkit-filter: drop-shadow( 0px 0px 1px #DD0303);
+    filter: drop-shadow( 0px 0px 1px #DD0303);
+  }
+
+#logo:hover{
+    cursor: pointer;
+  }
+#logo:hover{
+    -webkit-animation: Multicolor 5s linear infinite;
+            animation: Multicolor 5s linear infinite;
+  }
+#logo:hover path{
+    animation: Multistroke 5s linear infinite;
+  }
+
+#logo path:nth-child(1){
+    stroke-dasharray: 312;
+    stroke-dashoffset: 312;
+    animation: line-animation 2s ease forwards;
+}
+#logo path:nth-child(2){
+    stroke-dasharray: 199;
+    stroke-dashoffset: 199;
+    animation: line-animation 2s ease forwards 0.3s;
+}
+#logo path:nth-child(3){
+    stroke-dasharray: 619;
+    stroke-dashoffset: 619;
+    animation: line-animation 2s ease forwards 0.6s;
+}
+#logo path:nth-child(4){
+    stroke-dasharray: 443;
+    stroke-dashoffset: 443;
+    animation: line-animation 2s ease forwards 0.9s;
+}
+#logo path:nth-child(5){
+    stroke-dasharray: 277;
+    stroke-dashoffset: 277;
+    animation: line-animation 2s ease forwards 1.2s;
+}
+#logo path:nth-child(6){
+    stroke-dasharray: 477;
+    stroke-dashoffset: 477;
+    animation: line-animation 2s ease forwards 0.6s;
+}
+#logo path:nth-child(7){
+    stroke-dasharray: 522;
+    stroke-dashoffset: 522;
+    animation: line-animation 2s ease forwards 1.8s;
+}
+
+@keyframes line-animation {
+    to{
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes flicker {
+    10%,
+    30%,
+    60%,
+    75% {
+        opacity: 1;
+    }
+    20%,
+    40%,
+    70% {
+        opacity: 0.45;
+    }
+}
+
+/*Color Radio Buttons*/
+/*radio buttons modified from w3schools article @ https://www.w3schools.com/howto/howto_css_custom_checkbox.asp*/
+/*!important used to override color settings on various states*/
+.toggle-container {
+    padding: 1rem;
+}
+.red {
+    color: #DD0303 !important;
+    -webkit-transition: 1s;
+    transition: 1s;
+  }
+  .redLogo {
+    filter: drop-shadow( 0px 0px 1px #DD0303) !important;
+  }
+  .redPath{
+    stroke: #DD0303 !important;
+  }
+  
+  .yellow {
+    color: #F7E600 !important;
+    border-color: #F7E600 !important;
+    -webkit-transition: 1s;
+    transition: 1s;
+    fill: #F7E600 !important;
+    stroke: #F7E600 !important;
+  }
+  .yellowLogo {
+    filter: drop-shadow( 0px 0px 1px #F7E600) !important;
+  }
+  .yellowPath{
+    stroke: #F7E600 !important;
+  }
+  
+  .blue {
+    color: #00bfff !important;
+    border-color: #00bfff !important;
+    -webkit-transition: 1s;
+    transition: 1s;
+    fill: #00bfff !important;
+    stroke: #00bfff !important;
+  }
+  .blueLogo {
+    filter: drop-shadow( 0px 0px 1px #00bfff) !important;
+  }
+  .bluePath{
+    stroke: rgb(16, 168, 168) !important;
+  }
+  
+  .green {
+    color: #007C25 !important;
+    border-color: #007C25 !important;
+    -webkit-transition: 1s;
+    transition: 1s;
+    fill: #007C25 !important;
+    stroke: #007C25 !important;
+  }
+  .greenLogo {
+    filter: drop-shadow( 0px 0px 1px #007C25) !important;
+  }
+  .greenPath{
+    stroke: #007C25 !important;
+  }
+  
+  .pink {
+    color: #710783 !important;
+    border-color: #710783 !important;
+    -webkit-transition: 1s;
+    transition: 1s;
+    fill: #710783 !important;
+    stroke: #710783 !important;
+  }
+  .pinkLogo {
+    filter: drop-shadow( 0px 0px 1px #710783) !important;
+  }
+  .pinkPath{
+    stroke: #710783 !important;
+  }
+  
+  .orange {
+    color: #F78800 !important;
+    border-color: #F78800 !important;
+    -webkit-transition: 1s;
+    transition: 1s;
+    fill: #F78800 !important;
+    stroke: #F78800 !important;
+  }
+  .orangeLogo {
+    filter: drop-shadow( 0px 0px 1px #F78800) !important;
+  }
+  .orangePath{
+    stroke: #F78800 !important;
+  }
+  
+  .color-buttons {
+    padding-right: 1rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  
+  .btn-container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    margin: 0;
+  }
+  
+  /* Hide the browser's default checkbox */
+  .btn-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  /* Custom checkbox */
+  .btn-checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 27px;
+    width: 27px;
+  }
+  
+  /* Custom label*/
+  .btn-container {
+    display: block;
+    position: relative;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  /* Hide default radio button */
+  .btn-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  /* Custom radio button */
+  .btn-checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 26px;
+    width: 26px;
+    border-radius: 50%;
+  }
+  
+  .btn-checkmark-yellow {
+    border: 3px solid #F7E600;
+  }
+  
+  .btn-checkmark-blue {
+    border: 3px solid #00bfff;
+  }
+  
+  .btn-checkmark-green {
+    border: 3px solid #007C25;
+  }
+  
+  .btn-checkmark-pink {
+    border: 3px solid #710783;
+  }
+  
+  .btn-checkmark-orange {
+    border: 3px solid #F78800;
+  }
+  
+  .btn-checkmark-red {
+    border: 3px solid #DD0303;
+  }
+  
+  /*fill the circle when checked*/
+  .btn-container-yellow input:checked ~ .btn-checkmark {
+    background-color: #F7E600;
+  }
+  
+  .btn-container-blue input:checked ~ .btn-checkmark {
+    background-color: #00bfff;
+  }
+  
+  .btn-container-green input:checked ~ .btn-checkmark {
+    background-color: #007C25;
+  }
+  
+  .btn-container-pink input:checked ~ .btn-checkmark {
+    background-color: #710783;
+  }
+  
+  .btn-container-orange input:checked ~ .btn-checkmark {
+    background-color: #F78800;
+  }
+  
+  .btn-container-red input:checked ~ .btn-checkmark {
+    background-color: #DD0303;
+  }
