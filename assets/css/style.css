@@ -6,12 +6,22 @@ body {
     height: 100vh; 
 }
 
+/*---------------------------------------------------Map*/
+
 #map {
     width: 600px;
     height: 600px;
     border: solid black 1px;
     border-radius: .5rem;
 }
+
+@media (min-width: 576px) {
+        #map {
+        width: 100%;
+    }
+}
+
+/*---------------------------------------------------Logo*/
 
 h1 {
     font-family: 'Quicksand', sans-serif;
@@ -311,3 +321,16 @@ h1 {
   .btn-container-red input:checked ~ .btn-checkmark {
     background-color: #DD0303;
   }
+  
+/*---------------------------------------------------Nav bar*/
+
+.nav-icon {
+    font-size: 1.3rem;
+    color: #F55F6B;
+}
+
+.nav-link-pink {
+    font-size: 1.2rem;
+    color: #F55F6B;
+    font-weight: bold;
+}
