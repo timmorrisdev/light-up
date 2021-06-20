@@ -1,11 +1,3 @@
-body {
-    height: 100vh;
-    background: url(../images/rainbow-background1.jpeg) no-repeat
-    center center fixed;
-    background-size: cover;
-    height: 100vh; 
-}
-
 /*---------------------------------------------------Map*/
 
 #map {
@@ -15,20 +7,77 @@ body {
     border-radius: .5rem;
 }
 
+/*---------------------------------------------------Global*/
+
+body {
+    height: 100vh;
+    /* background: url(../images/rainbow-background1.jpeg) no-repeat
+    center center fixed;
+    background-size: cover; */
+    height: 100vh; 
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Quicksand', sans-serif;
+}
+
+/*---------------------------------------------------Font*/
+h1,h2,h3,h4,h5,h6 {
+  font-family: 'Quicksand', sans-serif;
+}
+
+@media (min-width: 576px) {
+  p {
+    font-size: 1.2rem;
+  }
+}
+
+/*---------------------------------------------------Intro*/
+.intro {
+  padding: 1rem;
+}
+#intro-p {
+  max-width: 500px;
+  margin: auto;
+}
+
+@media (min-width: 576px) {
+  .intro {
+    padding: 2rem;
+  }
+}
+
+/*---------------------------------------------------Map*/
+
+#map {
+    width: calc(200px + 30vw);
+    height: calc(200px + 30vw);
+    border: solid 3px;
+    border-radius: .5rem;
+    margin: auto;
+}
+
 @media (min-width: 576px) {
         #map {
-        width: 100%;
+        width: 90%;
     }
 }
 
 /*---------------------------------------------------Logo*/
 
 h1 {
-    font-family: 'Quicksand', sans-serif;
+  font-family: 'Quicksand', sans-serif;
+  }
+  
+.logo-buttons {
+  width: 100%;
 }
 
 #logo {
     animation: flicker 0.8s 4;
+    width: 180px;
+    height: 60px;
 }
 
 #logo path {
@@ -384,6 +433,10 @@ h1 {
 .card-title{
   text-align: center;
 }
+/**---------------------------------------------------Modal**/
+.modal-header, .modal-footer{
+background: url(../images/rainbow-background1.jpeg)
+}
 
 /**---------------------------------------------------Footer**/
 footer{
@@ -402,4 +455,107 @@ footer{
 
 .tech-date-about{
   text-align: center;
+}
+
+/**---------------------------------------------------Code Group**/
+.code-group-about{
+  margin-top: 2rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.code-group-about h1{
+  text-align: center;
+  font-size: 3rem;
+}
+
+.code-group-about p{
+  font-size: 1.5rem;
+  color: black;
+  text-align: center;
+}
+
+.code-group-about h2{
+  text-align: center;
+  font-size: 2rem;
+  font-family: 'Quicksand', sans-serif;
+}
+
+.profile-container{
+  margin-top: 2rem;
+}
+
+.card-img-top-pic{
+  border-radius: 50%;
+  height: 15rem;
+  width: 15rem;
+  margin: auto;
+  padding: 5px
+}
+
+/*---------------------------------------------------Forms & Buttons*/
+
+.btn-reg {
+    border: 2px solid;
+}
+
+.hint-text {
+    color:#28282d;
+    font-size: 0.9rem;
+    padding-left: 45px;
+}
+
+/*---------------------------------------------------Footer*/
+
+.footer .row {
+  margin: 0;
+  font-weight: 500;
+} 
+
+.footer {
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.footer-card {
+  background-color: rgba(222,222,222,0.6);
+  border-radius: 5px;
+  min-height: 14rem;
+  margin: 1.2rem 0;
+  padding: 0.5rem 1rem;
+  flex-direction: column;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.footer-card a, .footer-card div {
+  word-break: break-all;
+  text-decoration: none;
+}
+
+.social-links {
+  display: flex;
+  font-size: 2.5rem;
+}
+
+.footer div a:hover, .footer a i:hover{
+  -moz-transition: all 1s fade-in !important;
+  -o-transition: all 1s fade-in !important;
+  -webkit-transition: all 1s fade-in !important;
+  transition: all 1s fade-in !important;
+  color: #fff !important;
+}
+
+/*---------------------------------------------------Flashed messages*/
+
+.flashed-messsages {
+    line-height: 2;
+    color: black;
+    font-size: 1.6rem;
+}
+
+/*---------------------------------------------------User infowindows*/
+
+.card {
+    display: inline-block;
 }

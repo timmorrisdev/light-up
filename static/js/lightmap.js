@@ -98,7 +98,8 @@ function initMap() {
 
     };
 
-    //add markers
+
+    //add people markers
 
     function addMarker(location) {
 
@@ -124,28 +125,103 @@ function initMap() {
 
     };
 
-    // addMarker(people.person1.latLng);
-    // addMarker(people.person2.latLng);
+    //event data
 
-    /*
-        //info window
+    let events = {
+        event1: {
+            name: "End of Pride Month Celebration",
+            date: "26 June 2021",
+            time: "8pm",
+            location: "Eyre Square Galway",
+            latLng: {
+                lat: 53.274896532392404,
+                lng: -9.048743074342168
+            },
+            description: `Come celebrate the end of Pride Month (and end of Lockdown) in a socially
+            disanced community event taking place in Galway's Eyre Square. If you would like to 
+            attend, please do pop along! Live Music and food trucks available throughout the entire day
+            for you to enjoy. Bring all your family and friends! We would love to see you there!`,
+        },
 
-        const infoWindow = new google.maps.InfoWindow({
-            content: `<h2>Donegal</h2>`
+        event2: {
+            name: "LGBTQ+ Gamers West of Ireland",
+            date: "14 August 2021",
+            time: "9am",
+            location: "University Concert Hall Limerick",
+            latLng: {
+                lat: 52.67450019762998,
+                lng: -8.574073001345498
+            },
+            description: `All Day Gaming Event, hosted by University of Limerick for the LGBTQ+ community
+            from the West of Ireland. If you would love to meet some fellow gamers, make new connections
+            and meet new people, then this is the event for you!`,
+        },
+
+        event3: {
+            name: "Transgender in Tech West of Ireland",
+            date: "18 September 2021",
+            time: "9am",
+            location: "Sligo Institute of Technology",
+            latLng: {
+                lat: 54.27846131002264,
+                lng: -8.462845486907563
+            },
+            description: `"Hear from some of Irelands biggest names in Tech and how they have been embracing
+            being Transgender within the industry. If you are seeking inspiration and reassurance, then look
+            no further. This is going to be an amazing event and we are excited to see you there!"`,
+        },
+
+        event4: {
+            name: "Halloween Teen Hackathon South West of Ireland",
+            date: "30 October 2021",
+            time: "9am",
+            location: "The Brehon Hotel Killarney",
+            latLng: {
+                lat: 52.0459797478339,
+                lng: -9.503917255878095
+            },
+            description: `Are you aged 18 to 25? All Day Web Development Coding Event. This is sure to be an amazing 
+            day where you can meet other LGBTQ+ coders from the South West of Ireland and impress us with your imagination 
+            and coding ability! Regardless of your experience, we would love to see you there.
+            Prizes sponsored by Kerry County Council.`,
+        },
+    }
+
+    //add event markers
+
+    function addMarker(location) {
+
+        const marker = new google.maps.Marker({
+            position: location,
+            map: map,
+            icon: "assets/images/pride-pin-simple.png"
         });
 
+        //change icon to be lit
         marker.addListener("mouseover", () => {
-            infoWindow.open(map, marker);
+            marker.setIcon("assets/images/pride-pin-lit.png");
         });
 
         marker.addListener("mouseout", () => {
-            infoWindow.close(map, marker);
+            marker.setIcon("assets/images/pride-pin-simple.png");
         });
-    */
 
 
+    };
+
+    for (let i in events) {
+        addMarker(events[i].latLng)
+
+    };
+
+    //info window
 
 
+    // marker.addListener("mouseover", () => {
+    //     infoWindow.open(map, marker);
+    // });
 
-
+    // marker.addListener("mouseout", () => {
+    //     infoWindow.close(map, marker);
+    // });
 }
