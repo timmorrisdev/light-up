@@ -332,3 +332,15 @@ h1 {
     font-size: 1.2rem;
     font-weight: bold;
 }
+
+/*---------------------------------------------------Forms & Buttons*/
+
+.btn-reg {
+    border: 2px solid;
+}
+
+.hint-text {
+    color:#28282d;
+    font-size: 0.9rem;
+    padding-left: 45px;
+}
