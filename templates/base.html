@@ -123,7 +123,7 @@
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <li><a class="dropdown-item {% block navRegister%}{% endblock %}"
                                     href="{{ url_for('register') }}">Register</a></li>
-                            <li><a class="dropdown-item {% block navLogin%}{% endblock %}" href="#">Login</a></li>
+                            <li><a class="dropdown-item {% block navLogin%}{% endblock %}" href="{{ url_for('login') }}">Login</a></li>
                         </ul>
                     </li>
                 </ul>
