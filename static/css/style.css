@@ -505,6 +505,47 @@ footer{
     padding-left: 45px;
 }
 
+/*---------------------------------------------------Footer*/
+
+.footer .row {
+  margin: 0;
+  font-weight: 500;
+} 
+
+.footer {
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.footer-card {
+  background-color: rgba(222,222,222,0.6);
+  border-radius: 5px;
+  min-height: 14rem;
+  margin: 1.2rem 0;
+  padding: 0.5rem 1rem;
+  flex-direction: column;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.footer-card a, .footer-card div {
+  word-break: break-all;
+  text-decoration: none;
+}
+
+.social-links {
+  display: flex;
+  font-size: 2.5rem;
+}
+
+.footer div a:hover, .footer a i:hover{
+  -moz-transition: all 1s fade-in !important;
+  -o-transition: all 1s fade-in !important;
+  -webkit-transition: all 1s fade-in !important;
+  transition: all 1s fade-in !important;
+  color: #fff !important;
+}
+
 /*---------------------------------------------------Flashed messages*/
 
 .flashed-messsages {
