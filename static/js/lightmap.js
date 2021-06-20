@@ -224,5 +224,4 @@ function initMap() {
     // marker.addListener("mouseout", () => {
     //     infoWindow.close(map, marker);
     // });
-
 }
