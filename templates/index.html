@@ -10,6 +10,13 @@
         </p>
     </div>
     <div id="map" class="red color"></div>
+    <div id="users">
+        {% for user in users %}
+        <div class="card col-3">
+            <p>Username: {{ user.username }}</p>
+        </div>
+        {% endfor %}
+    </div>
     {% endblock %}
 
 
