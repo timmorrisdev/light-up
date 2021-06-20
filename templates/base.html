@@ -16,7 +16,8 @@
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="static/css/style.css" />
-    <link rel="shortcut icon" type="image/png" href="static/images/light-up-120.png" />
+    <link rel="shortcut icon" type="image/png" href="../static/images/light-up-120.png" />
+
     {% block styles %}
     {% endblock %}
     
@@ -26,7 +27,7 @@
     <nav class="pt-3 mb-2 navbar navbar-expand-lg navbar-light bg-light">
         <!--Logo-->
         <div class="container-fluid">
-            <div class="row mb-2">
+            <div class="row mb-2 logo-buttons">
                 <div class="col-9 col-lg-12">
                     <div class="col-lg-5 col-12 mb-3 pr-0"><a href="{{ url_for('get_home') }}">
                             <svg id="logo" width="270" height="70" viewBox="0 0 541 140" fill="none"
@@ -54,6 +55,7 @@
                                     stroke="black" stroke-width="4" mask="url(#path-1-outside-1)" />
                             </svg> </a>
                     </div>
+                    
                     <div class="col-lg-7 col-12 pl-0">
                         <div class="toggle-container">
                             <!--Used to switch color schemes, these preferences are saved to session storage-->
@@ -86,7 +88,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-2 mr-1 d-lg-none"><button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                <div class="col-2 mr-1 d-lg-none text-right"><button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                         data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
@@ -128,13 +130,6 @@
             </div>
         </div>
     </nav>
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-12">
-                <p>Connecting the LGBTQ coding community</p>
-            </div>
-        </div>
-    </div>
 </header>
 
 <body>
@@ -159,7 +154,7 @@
     <script type="text/javascript"
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDw_c4mhpi8UoRoyIbp0mt4E3BUzPh5n6o&libraries=places&callback=initMap"
         defer>
-        </script>
+    </script>
     <script src="static/js/lightmap.js"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
