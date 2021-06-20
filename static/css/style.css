@@ -344,3 +344,44 @@ h1 {
     font-size: 0.9rem;
     padding-left: 45px;
 }
+
+/*---------------------------------------------------Footer*/
+
+
+.footer .row {
+  margin: 0;
+  font-weight: 500;
+} 
+
+.footer {
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.footer-card {
+  background-color: rgba(222,222,222,0.8);
+  border-radius: 5px;
+  min-height: 14rem;
+  margin: 1.2rem 0;
+  padding: 0.5rem 1rem;
+  flex-direction: column;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.footer-card a, .footer-card div {
+  word-break: break-all;
+}
+
+.social-links {
+  display: flex;
+  font-size: 2.5rem;
+}
+
+.footer a:hover, .footer a i:hover{
+  -moz-transition: all 1s fade-in;
+  -o-transition: all 1s fade-in;
+  -webkit-transition: all 1s fade-in;
+  transition: all 1s fade-in;
+  color: #fff;
+}
