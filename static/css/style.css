@@ -1,34 +1,64 @@
 body {
     height: 100vh;
-    background: url(../images/rainbow-background1.jpeg) no-repeat
+    /* background: url(../images/rainbow-background1.jpeg) no-repeat
     center center fixed;
-    background-size: cover;
+    background-size: cover; */
     height: 100vh; 
 }
+
+/*---------------------------------------------------Font*/
+h1,h2,h3,h4,h5,h6 {
+  font-family: 'Quicksand', sans-serif;
+}
+
+@media (min-width: 576px) {
+  p {
+    font-size: 1.2rem;
+  }
+}
+
+/*---------------------------------------------------Intro*/
+.intro {
+  padding: 1rem;
+}
+#intro-p {
+  max-width: 500px;
+  margin: auto;
+}
+
+@media (min-width: 576px) {
+  .intro {
+    padding: 2rem;
+  }
+}
+
 
 /*---------------------------------------------------Map*/
 
 #map {
-    width: 600px;
-    height: 600px;
-    border: solid black 1px;
+    width: calc(200px + 30vw);
+    height: calc(200px + 30vw);
+    border: solid 3px;
     border-radius: .5rem;
+    margin: auto;
 }
 
 @media (min-width: 576px) {
         #map {
-        width: 100%;
+        width: 90%;
     }
 }
 
 /*---------------------------------------------------Logo*/
 
-h1 {
-    font-family: 'Quicksand', sans-serif;
+.logo-buttons {
+  width: 100%;
 }
 
 #logo {
     animation: flicker 0.8s 4;
+    width: 180px;
+    height: 60px;
 }
 
 #logo path {
