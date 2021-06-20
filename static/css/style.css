@@ -344,3 +344,15 @@ h1 {
     font-size: 0.9rem;
     padding-left: 45px;
 }
+
+/*---------------------------------------------------Flashed messages*/
+
+.flashed-messsages {
+    line-height: 2;
+    color: black;
+    font-size: 1.6rem;
+}
+
+
+/*---------------------------------------------------User infowindows*/
+

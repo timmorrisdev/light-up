@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% block navRegister %}active{% endblock %}
+{% block content %}
+
+<div class="row ml-4">
+    <h3 class="center-align">Log In</h3>
+</div>
+<div class="row pl-5 pr-5">
+    <form method="POST" action="{{ url_for('login') }}">
+        <div class="card mt-3 mb-3 p-4">
+            <!--username field-->
+            <div class="row">
+                <div class="input-field col-12">
+                    <i class="fas fa-user-cog prefix nav-icon color red"></i>
+                    <input id="username" name="username" type="text" minlength="4" max-length="15"
+                        pattern="^[a-zA-Z0-9]{4,15}$" class="validate" required>
+                    <label for="username">Username</label>
+                </div>
+            </div>
+            <!--password field-->
+            <div class="row">
+                <div class="input-field col-12">
+                    <i class="fas fa-user-lock prefix nav-icon color red"></i>
+                    <input id="password" name="password" type="password" minlength="8" max-length="20"
+                        pattern="^[a-zA-Z0-9]{8,20}$" class="validate" required>
+                    <label for="password">Add a password</label>
+                </div>
+            </div>
+            <!--register button-->
+            <div class="row mt-3">
+                <button type="submit" class="ml-3 col-4 btn color red btn-reg">Log In <i
+                        class="fas fa-door-open"></i></button>
+            </div>
+        </div>
+    </form>
+</div>
+<!--Not a member link-->
+<div class="row">
+    <div class="col-12 ml-4">
+        <h5>New here?
+            <a href="{{ url_for('register') }}">Join now</a></h5>
+    </div>
+</div>
+{% block scripts %}
+
+<script src="/static/js/registration.js"></script>
+{% endblock %}
+
+{% endblock %}

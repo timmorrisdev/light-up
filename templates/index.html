@@ -8,6 +8,13 @@
         show others they are not alone.
     </p>
     <div id="map"></div>
+    <div id="users">
+        {% for user in users %}
+        <div class="card col-3">
+            <p>Username: {{ user.username }}</p>
+        </div>
+        {% endfor %}
+    </div>
     {% endblock %}
 
 

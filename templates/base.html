@@ -117,7 +117,7 @@
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <li><a class="dropdown-item {% block navRegister%}{% endblock %}" href="{{ url_for('register') }}">Register</a></li>
-                            <li><a class="dropdown-item {% block navLogin%}{% endblock %}" href="#">Login</a></li>
+                            <li><a class="dropdown-item {% block navLogin%}{% endblock %}" href="{{ url_for('login') }}">Login</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -134,6 +134,20 @@
 </header>
 
 <body>
+            <section>
+            <!--flashed messages-->
+            {% with messages = get_flashed_messages() %}
+            {% if messages %}
+            {% for message in messages %}
+            <div class="row ml-4">
+                <p class="center-align flashed-messsages">
+                    {{ message }}
+                </p>
+            </div>
+            {% endfor %}
+            {% endif %}
+            {% endwith %}
+        </section>
     {% block content %}
     {% endblock %}
 
