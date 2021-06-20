@@ -332,3 +332,74 @@ h1 {
     font-size: 1.2rem;
     font-weight: bold;
 }
+
+/**---------------------------------------------------Hero Image**/
+.hero-image{
+  background-image: url(../images/pride-flag.jpg);
+  width: 100%;
+  height: 70vh;
+}
+
+/*---------------------------------------------------About*/
+.about{
+  margin-top: 20px;
+  text-align: center;
+  padding: 20px 40px;
+}
+
+.about-title{
+  font-size: 3rem;
+}
+
+.about p{
+  font-size: 1.5rem;
+}
+
+/**---------------------------------------------------Map and Event Section**/
+.map-event-section{
+  height: 80vh;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.events-title{
+  text-align: center;
+}
+
+.events-box{
+  border: 1px solid black;
+  border-radius: 5px;
+  height: 30%;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+.card{
+  margin: 10px auto;
+  border: 1px solid black;
+  line-height: normal;
+  box-shadow: 5px 5px 15px gray;
+}
+
+.card-title{
+  text-align: center;
+}
+
+/**---------------------------------------------------Footer**/
+footer{
+  height: 20vh;
+  background-color: antiquewhite;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.social-links{
+  font-size: 2rem;
+}
+
+/**---------------------------------------------------Tech Dates**/
+
+.tech-date-about{
+  text-align: center;
+}
