@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
+    <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css" />
@@ -20,15 +19,16 @@
 
   <title>Light Up!</title>
 </head>
-
 <body>
-
+    <!--Navbar and Logo-->
     <header>
         <nav class="pt-3 mb-2 navbar navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid">
                 <div class="row mb-2">
                     <div class="col-9 col-lg-12">
                         <div class="col-lg-5 col-12 mb-3 pr-0">
+                            <li class="nav-item">
+                                <a class="nav-link nav-link-grey" href="index.html">
                             <svg id="logo" width="270" height="70" viewBox="0 0 541 140" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path class="logoPath"
@@ -53,6 +53,8 @@
                                     d="M504.774 34.84C511.11 34.84 516.87 36.472 522.054 39.736C527.238 42.904 531.27 47.368 534.15 53.128C537.126 58.792 538.614 65.176 538.614 72.28C538.614 79.48 537.126 85.96 534.15 91.72C531.27 97.384 527.238 101.848 522.054 105.112C516.966 108.376 511.254 110.008 504.918 110.008C499.35 110.008 494.214 108.712 489.51 106.12C484.902 103.432 481.206 99.88 478.422 95.464V133.48C478.422 134.728 477.99 135.736 477.126 136.504C476.358 137.368 475.35 137.8 474.102 137.8C472.854 137.8 471.798 137.368 470.934 136.504C470.166 135.736 469.782 134.728 469.782 133.48V39.592C469.782 38.344 470.166 37.288 470.934 36.424C471.798 35.56 472.854 35.128 474.102 35.128C475.35 35.128 476.358 35.56 477.126 36.424C477.99 37.288 478.422 38.344 478.422 39.592V49.384C480.918 44.872 484.518 41.32 489.222 38.728C493.926 36.136 499.11 34.84 504.774 34.84ZM504.054 101.944C509.046 101.944 513.51 100.696 517.446 98.2C521.478 95.608 524.598 92.056 526.806 87.544C529.11 83.032 530.262 77.944 530.262 72.28C530.262 66.712 529.11 61.72 526.806 57.304C524.598 52.792 521.478 49.288 517.446 46.792C513.51 44.2 509.046 42.904 504.054 42.904C498.966 42.904 494.406 44.152 490.374 46.648C486.342 49.144 483.222 52.648 481.014 57.16C478.806 61.576 477.702 66.616 477.702 72.28C477.702 77.944 478.806 83.032 481.014 87.544C483.222 92.056 486.342 95.608 490.374 98.2C494.406 100.696 498.966 101.944 504.054 101.944Z"
                                     stroke="black" stroke-width="4" mask="url(#path-1-outside-1)" />
                             </svg>
+                            </a>
+                            </li>
                         </div>
                         <div class="col-lg-7 col-12 pl-0">
                             <div class="toggle-container">
@@ -124,99 +126,183 @@
                     </ul>
                 </div>
             </div>
-            </nav>
-            <div class="container-fluid">
-                <div class="row">
-                    <!--Hero Image Placeholder Div-->
-                    <div class="hero-image color red">
-                      <h1>Join the Light Up Community Today!!</h1>
-                    </div>
-                </div>
-            </div>
-        
+        </nav>        
     </header>
 
-    <div class="about">
-        <h1 class="about-title color red">Light Up</h1>
-        <p>
-          Here at Light Up we reach out to the furthest corners of Irelands LGBTQ+ tech community to Connect, Create and
-          Discover the possibilities within rural Ireland. Light Up enables you to discover the LGBTQ+ tech community around
-          you by lighting up your area and letting others know that they are not alone. Host Virtual Events or come to one
-          of our Community Gatherings and help us spread Pride throughout Ireland. </p>
-      </div>
-  
-   <input id="search-box" placeholder="Start typing a city name" class="search-boxes" type="text">
-   <section class="map-event-section">
-    <div class="row">
-      <!--MAP-->
-      <div class="col-12 col-md-8" id="map"></div>
-      <!--Events Container-->
-      <div class="container col-12 col-md-4">
-        <h2 class="events-title color red">Up Coming Events</h2>
-        <div class="events-box">
-          <!--Event Cards-->
-          <div class="card" style="width: 20rem;">
-            <img src="https://images.unsplash.com/photo-1561057160-ce83b1bd72f4?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" class="card-img-top" alt="Two cups of Coffee">
-            <div class="card-body">
-              <h5 class="card-title"><i class="fas fa-users color red"></i> End of Pride</h5>
-              <ul class="list-group list-group-flush">
-                <li class="list-group-item"><strong>Loacation:</strong> Galway</li>
-                <li class="list-group-item"><strong>Date:</strong> 25/6/2021</li>
-                <li class="list-group-item"><strong>Time:</strong> 18:00</li>
-              </ul>
-              <p class="card-text">It may be the end of pride month, but we will always be proud. Join us in celebrating </p>
-            </div>
-            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#eventmodal">Register</button>
-          </div>
-
-          <div class="card" style="width: 20rem;">
-            <img src="https://images.unsplash.com/photo-1501504905252-473c47e087f8?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=667&q=80" class="card-img-top" alt="Two cups of Coffee">
-            <div class="card-body">
-              <h5 class="card-title"><i class="fas fa-laptop color red"></i> Virtual Coffee and Code Meet-Up</h5>
-              <ul class="list-group list-group-flush">
-                <li class="list-group-item"><strong>Loacation:</strong> Virtual</li>
-                <li class="list-group-item"><strong>Date:</strong> 25/6/2021</li>
-                <li class="list-group-item"><strong>Time:</strong> 13:00</li>
-              </ul>
-              <p class="card-text">Get together with the Light Up community and discuss the two of things that a Software Developer cant live without. Coffee and Code!!</p>
-            </div>
-            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#eventmodal">Register</button>
-          </div>
-
-          <div class="card" style="width: 20rem;">
-            <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1050&q=80" class="card-img-top" alt="Two cups of Coffee">
-            <div class="card-body">
-              <h5 class="card-title"><i class="fas fa-laptop color red"></i> Hackathon</h5>
-              <ul class="list-group list-group-flush">
-                <li class="list-group-item"><strong>Loacation:</strong> Virtual</li>
-                <li class="list-group-item"><strong>Date:</strong> 2/12/2021</li>
-                <li class="list-group-item"><strong>Time:</strong> 10:00</li>
-              </ul>
-              <p class="card-text">Get the chance to work in a team and inspire eachother to create. Loads of people love taking part in Light Up Hackathons.</p>
-            </div>
-            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#eventmodal">Register</button>
-          </div>
-
-          <div class="card" style="width: 20rem;">
-            <img src="https://images.unsplash.com/photo-1553242072-345b34e7b55b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80" class="card-img-top" alt="Two cups of Coffee">
-            <div class="card-body">
-              <h5 class="card-title"><i class="fas fa-users color red"></i>Pride of Life</h5>
-              <ul class="list-group list-group-flush">
-                <li class="list-group-item"><strong>Loacation:</strong>Cork</li>
-                <li class="list-group-item"><strong>Date:</strong> 5/9/2021</li>
-                <li class="list-group-item"><strong>Time:</strong> All Day</li>
-              </ul>
-              <p class="card-text">Come together to celebrate artisan crafts and small businesses run by people in the LGBTQ+ community. There will be live music and plenty of activities for everyone to take part in.</p>
-            </div>
-            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#eventmodal">
-              >Register</button>
-          </div>
+    <section>
+        <div class="code-group-about color red">
+            <h1>Connect with coders in your area.</h1>
+            <p>There are so many benfits to connecting with like minded people in your area. <em>Learning</em>, <em>Developing</em> and <em>Laughing</em> together can help build friendships which will last a lifetime.</p>
+            <h2>Here are some Coders in your area that would love to connect.</h2>
         </div>
-      </div>
-    </div>
-  </section>
 
-  <!--Footer-->
+        <div class="container profile-container">
+            <div class="row">
+                <div class="col-12 col-md-3 col-md-4">
+                    <div class="card" style="width: 20rem;">
+                        <img src="https://images.unsplash.com/photo-1463453091185-61582044d556?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" class="card-img-top-pic" alt="Two cups of Coffee">
+                        <div class="card-body">
+                        <h5 class="card-title"><i class="fas fa-user color red"></i> Name Name</h5>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item"><strong>Pronouns:</strong> He/Him</li>
+                            <li class="list-group-item"><strong>Loacation:</strong> Galway</li>
+                            <li class="list-group-item"><strong>Tech Skills:</strong> HTML, CSS, Python, JavaScript</li>
+                            <li class="list-group-item"><strong>Orientation:</strong> Trans</li>
+                        </ul>
+                        <p class="card-text">Self taught full stack developer. Looking for someone to collaborate with and who’s up for an adventure.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-3 col-md-4">
+                    <div class="card" style="width: 20rem;">
+                        <img src="https://images.unsplash.com/photo-1564564321837-a57b7070ac4f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1055&q=80" class="card-img-top-pic" alt="Two cups of Coffee">
+                        <div class="card-body">
+                        <h5 class="card-title"><i class="fas fa-user color red"></i> Name Name</h5>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item"><strong>Pronouns:</strong> He/Him</li>
+                            <li class="list-group-item"><strong>Loacation:</strong> Galway</li>
+                            <li class="list-group-item"><strong>Tech Skills:</strong> HTML, CSS, Python, JavaScript</li>
+                            <li class="list-group-item"><strong>Orientation:</strong> Trans</li>
+                        </ul>
+                        <p class="card-text">Self taught full stack developer. Looking for someone to collaborate with and who’s up for an adventure.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-3 col-md-4">
+                    <div class="card" style="width: 20rem;">
+                        <img src=" https://images.unsplash.com/photo-1477118476589-bff2c5c4cfbb?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" class="card-img-top-pic" alt="Two cups of Coffee">
+                        <div class="card-body">
+                        <h5 class="card-title"><i class="fas fa-user color red"></i> Name Name</h5>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item"><strong>Pronouns:</strong> He/Him</li>
+                            <li class="list-group-item"><strong>Loacation:</strong> Galway</li>
+                            <li class="list-group-item"><strong>Tech Skills:</strong> HTML, CSS, Python, JavaScript</li>
+                            <li class="list-group-item"><strong>Orientation:</strong> Trans</li>
+                        </ul>
+                        <p class="card-text">Self taught full stack developer. Looking for someone to collaborate with and who’s up for an adventure.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-3 col-md-4">
+                    <div class="card" style="width: 20rem;">
+                        <img src="https://images.unsplash.com/photo-1477118476589-bff2c5c4cfbb?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" class="card-img-top-pic" alt="Two cups of Coffee">
+                        <div class="card-body">
+                        <h5 class="card-title"><i class="fas fa-user color red"></i> Name Name</h5>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item"><strong>Pronouns:</strong> He/Him</li>
+                            <li class="list-group-item"><strong>Loacation:</strong> Galway</li>
+                            <li class="list-group-item"><strong>Tech Skills:</strong> HTML, CSS, Python, JavaScript</li>
+                            <li class="list-group-item"><strong>Orientation:</strong> Trans</li>
+                        </ul>
+                        <p class="card-text">Self taught full stack developer. Looking for someone to collaborate with and who’s up for an adventure.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-3 col-md-4">
+                    <div class="card" style="width: 20rem;">
+                        <img src="https://images.unsplash.com/photo-1592598015799-35c84b09394c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" class="card-img-top-pic" alt="Two cups of Coffee">
+                        <div class="card-body">
+                        <h5 class="card-title"><i class="fas fa-user color red"></i> Name Name</h5>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item"><strong>Pronouns:</strong> He/Him</li>
+                            <li class="list-group-item"><strong>Loacation:</strong> Galway</li>
+                            <li class="list-group-item"><strong>Tech Skills:</strong> HTML, CSS, Python, JavaScript</li>
+                            <li class="list-group-item"><strong>Orientation:</strong> Trans</li>
+                        </ul>
+                        <p class="card-text">Self taught full stack developer. Looking for someone to collaborate with and who’s up for an adventure.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-3 col-md-4">
+                    <div class="card" style="width: 20rem;">
+                        <img src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80" class="card-img-top-pic" alt="Two cups of Coffee">
+                        <div class="card-body">
+                        <h5 class="card-title"><i class="fas fa-user color red"></i> Name Name</h5>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item"><strong>Pronouns:</strong> He/Him</li>
+                            <li class="list-group-item"><strong>Loacation:</strong> Galway</li>
+                            <li class="list-group-item"><strong>Tech Skills:</strong> HTML, CSS, Python, JavaScript</li>
+                            <li class="list-group-item"><strong>Orientation:</strong> Trans</li>
+                        </ul>
+                        <p class="card-text">Self taught full stack developer. Looking for someone to collaborate with and who’s up for an adventure.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-3 col-md-4">
+                    <div class="card" style="width: 20rem;">
+                        <img src="https://images.unsplash.com/photo-1543207564-1271b510019d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80" class="card-img-top-pic" alt="Two cups of Coffee">
+                        <div class="card-body">
+                        <h5 class="card-title"><i class="fas fa-user color red"></i> Name Name</h5>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item"><strong>Pronouns:</strong> He/Him</li>
+                            <li class="list-group-item"><strong>Loacation:</strong> Galway</li>
+                            <li class="list-group-item"><strong>Tech Skills:</strong> HTML, CSS, Python, JavaScript</li>
+                            <li class="list-group-item"><strong>Orientation:</strong> Trans</li>
+                        </ul>
+                        <p class="card-text">Self taught full stack developer. Looking for someone to collaborate with and who’s up for an adventure.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-3 col-md-4">
+                    <div class="card" style="width: 20rem;">
+                        <img src="https://images.unsplash.com/photo-1561742026-49ec5faa1b95?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=750&q=80" class="card-img-top-pic" alt="Two cups of Coffee">
+                        <div class="card-body">
+                        <h5 class="card-title"><i class="fas fa-user color red"></i> Name Name</h5>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item"><strong>Pronouns:</strong> He/Him</li>
+                            <li class="list-group-item"><strong>Loacation:</strong> Galway</li>
+                            <li class="list-group-item"><strong>Tech Skills:</strong> HTML, CSS, Python, JavaScript</li>
+                            <li class="list-group-item"><strong>Orientation:</strong> Trans</li>
+                        </ul>
+                        <p class="card-text">Self taught full stack developer. Looking for someone to collaborate with and who’s up for an adventure.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-3 col-md-4">
+                    <div class="card" style="width: 20rem;">
+                        <img src="https://images.unsplash.com/photo-1548372290-8d01b6c8e78c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80" class="card-img-top-pic" alt="Two cups of Coffee">
+                        <div class="card-body">
+                        <h5 class="card-title"><i class="fas fa-user color red"></i> Name Name</h5>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item"><strong>Pronouns:</strong> He/Him</li>
+                            <li class="list-group-item"><strong>Loacation:</strong> Galway</li>
+                            <li class="list-group-item"><strong>Tech Skills:</strong> HTML, CSS, Python, JavaScript</li>
+                            <li class="list-group-item"><strong>Orientation:</strong> Trans</li>
+                        </ul>
+                        <p class="card-text">Self taught full stack developer. Looking for someone to collaborate with and who’s up for an adventure.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-3 col-md-4">
+                    <div class="card" style="width: 20rem;">
+                        <img src="https://images.unsplash.com/photo-1506956191951-7a88da4435e5?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=667&q=80" class="card-img-top-pic" alt="Two cups of Coffee">
+                        <div class="card-body">
+                        <h5 class="card-title"><i class="fas fa-user color red"></i> Name Name</h5>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item"><strong>Pronouns:</strong> He/Him</li>
+                            <li class="list-group-item"><strong>Loacation:</strong> Galway</li>
+                            <li class="list-group-item"><strong>Tech Skills:</strong> HTML, CSS, Python, JavaScript</li>
+                            <li class="list-group-item"><strong>Orientation:</strong> Trans</li>
+                        </ul>
+                        <p class="card-text">Self taught full stack developer. Looking for someone to collaborate with and who’s up for an adventure.</p>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+    </section>
+
+     <!--Footer-->
   <footer>
     <div class="container">
         <div class="social-links">
@@ -229,39 +315,12 @@
     </div>
   </footer>
 
-  <!--Event Registration Modal-->
-  <div class="modal" id="eventmodal" tabindex="-1">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title ml-auto mr-auto">Pride Event Registration</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <form action="">
-            <label for="first-name">First Name</label>
-            <input type="text" name="first-name" id="first-name" required>
-            <br>
-            <label for="last-name">Last Name</label>
-            <input type="text" name="last-name" id="last-name" required>
-            <br>
-            <label for="email">Email</label>
-            <input type="email" name="email" id="email" placeholder="email@address.com" required>
-          </form>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn color red" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn color red">Confirm</button>
-        </div>
-      </div>
-    </div>
-  </div>
-    <script src="./assets/js/app.js"></script>
-    <script type="text/javascript"
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDw_c4mhpi8UoRoyIbp0mt4E3BUzPh5n6o&callback=initMap"
+    <script src="./static/js/app.js"></script>
+    <script type=“text/javascript”
+        src=“https://maps.googleapis.com/maps/api/js?key=AIzaSyDw_c4mhpi8UoRoyIbp0mt4E3BUzPh5n6o&libraries=places&callback=initMap”
         defer>
     </script>
-    <script src="assets/js/lightmap.js"></script>
+    <script src="static/js/lightmap.js"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
@@ -271,5 +330,4 @@
         integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous">
     </script>
 </body>
-
 </html>
