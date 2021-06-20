@@ -166,7 +166,7 @@
               </ul>
               <p class="card-text">It may be the end of pride month, but we will always be proud. Join us in celebrating </p>
             </div>
-            <button type="button" class="btn btn-primary">Register</button>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#eventmodal">Register</button>
           </div>
 
           <div class="card" style="width: 20rem;">
@@ -180,7 +180,7 @@
               </ul>
               <p class="card-text">Get together with the Light Up community and discuss the two of things that a Software Developer cant live without. Coffee and Code!!</p>
             </div>
-            <button type="button" class="btn btn-primary">Register</button>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#eventmodal">Register</button>
           </div>
 
           <div class="card" style="width: 20rem;">
@@ -194,7 +194,7 @@
               </ul>
               <p class="card-text">Get the chance to work in a team and inspire eachother to create. Loads of people love taking part in Light Up Hackathons.</p>
             </div>
-            <button type="button" class="btn btn-primary">Register</button>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#eventmodal">Register</button>
           </div>
 
           <div class="card" style="width: 20rem;">
@@ -208,7 +208,8 @@
               </ul>
               <p class="card-text">Come together to celebrate artisan crafts and small businesses run by people in the LGBTQ+ community. There will be live music and plenty of activities for everyone to take part in.</p>
             </div>
-            <button type="button" class="btn btn-primary">Register</button>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#eventmodal">
+              >Register</button>
           </div>
         </div>
       </div>
@@ -228,6 +229,33 @@
     </div>
   </footer>
 
+  <!--Event Registration Modal-->
+  <div class="modal" id="eventmodal" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title ml-auto mr-auto">Pride Event Registration</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form action="">
+            <label for="first-name">First Name</label>
+            <input type="text" name="first-name" id="first-name" required>
+            <br>
+            <label for="last-name">Last Name</label>
+            <input type="text" name="last-name" id="last-name" required>
+            <br>
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" placeholder="email@address.com" required>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn color red" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn color red">Confirm</button>
+        </div>
+      </div>
+    </div>
+  </div>
     <script src="./assets/js/app.js"></script>
     <script type="text/javascript"
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDw_c4mhpi8UoRoyIbp0mt4E3BUzPh5n6o&callback=initMap"

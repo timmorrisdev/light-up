@@ -384,6 +384,10 @@ h1 {
 .card-title{
   text-align: center;
 }
+/**---------------------------------------------------Modal**/
+.modal-header, .modal-footer{
+background: url(../images/rainbow-background1.jpeg)
+}
 
 /**---------------------------------------------------Footer**/
 footer{
@@ -403,3 +407,4 @@ footer{
 .tech-date-about{
   text-align: center;
 }
+
