@@ -1,9 +1,16 @@
+/*---------------------------------------------------Global*/
+
 body {
     height: 100vh;
     /* background: url(../images/rainbow-background1.jpeg) no-repeat
     center center fixed;
     background-size: cover; */
     height: 100vh; 
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Quicksand', sans-serif;
 }
 
 /*---------------------------------------------------Font*/
@@ -374,3 +381,15 @@ h1,h2,h3,h4,h5,h6 {
     font-size: 0.9rem;
     padding-left: 45px;
 }
+
+/*---------------------------------------------------Flashed messages*/
+
+.flashed-messsages {
+    line-height: 2;
+    color: black;
+    font-size: 1.6rem;
+}
+
+
+/*---------------------------------------------------User infowindows*/
+
