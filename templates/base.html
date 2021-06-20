@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css" />
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+        integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.1.1/css/hover-min.css"
+        type="text/css" />
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="static/css/style.css" />
+    <link rel="shortcut icon" type="image/png" href="../static/images/light-up-120.png" />
+
+    {% block styles %}
+    {% endblock %}
+    
+    <title>Light Up!</title>
+</head>
+<header>
+    <nav class="pt-3 mb-2 navbar navbar-expand-lg navbar-light bg-light">
+        <!--Logo-->
+        <div class="container-fluid">
+            <div class="row mb-2 logo-buttons">
+                <div class="col-9 col-lg-12">
+                    <div class="col-lg-5 col-12 mb-3 pr-0"><a href="{{ url_for('get_home') }}">
+                            <svg id="logo" width="270" height="70" viewBox="0 0 541 140" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path class="logoPath"
+                                    d="M58.264 100.504C59.512 100.504 60.52 100.888 61.288 101.656C62.152 102.424 62.584 103.432 62.584 104.68C62.584 105.928 62.152 106.984 61.288 107.848C60.52 108.616 59.512 109 58.264 109H6.85601C5.60801 109 4.55201 108.616 3.68801 107.848C2.92001 106.984 2.53601 105.928 2.53601 104.68V12.52C2.53601 11.272 2.96801 10.264 3.83201 9.496C4.69601 8.632 5.80001 8.2 7.14401 8.2C8.39201 8.2 9.44801 8.632 10.312 9.496C11.176 10.264 11.608 11.272 11.608 12.52V100.504H58.264Z"
+                                    stroke="black" stroke-width="4" mask="url(#path-1-outside-1)" />
+                                <path class="logoPath"
+                                    d="M85.3686 104.68C85.3686 105.928 84.9366 106.984 84.0726 107.848C83.3046 108.616 82.2966 109 81.0486 109C79.8006 109 78.7446 108.616 77.8806 107.848C77.1126 106.984 76.7286 105.928 76.7286 104.68V38.44C76.7286 37.192 77.1126 36.184 77.8806 35.416C78.7446 34.552 79.8006 34.12 81.0486 34.12C82.2966 34.12 83.3046 34.552 84.0726 35.416C84.9366 36.184 85.3686 37.192 85.3686 38.44V104.68ZM81.0486 24.472C79.1286 24.472 77.6406 24.04 76.5846 23.176C75.5286 22.216 75.0006 20.872 75.0006 19.144V17.704C75.0006 15.976 75.5286 14.68 76.5846 13.816C77.7366 12.856 79.2726 12.376 81.1926 12.376C85.0326 12.376 86.9526 14.152 86.9526 17.704V19.144C86.9526 20.872 86.4246 22.216 85.3686 23.176C84.4086 24.04 82.9686 24.472 81.0486 24.472Z"
+                                    stroke="black" stroke-width="4" mask="url(#path-1-outside-1)" />
+                                <path class="logoPath"
+                                    d="M170.022 35.416C171.27 35.416 172.278 35.848 173.046 36.712C173.91 37.48 174.342 38.536 174.342 39.88V102.232C174.342 109.72 172.758 116.104 169.59 121.384C166.518 126.76 162.246 130.84 156.774 133.624C151.398 136.408 145.206 137.8 138.198 137.8C134.838 137.8 131.286 137.368 127.542 136.504C123.894 135.64 120.726 134.536 118.038 133.192C115.446 131.848 113.958 130.456 113.574 129.016C112.902 128.344 112.566 127.576 112.566 126.712C112.566 125.752 112.998 124.984 113.862 124.408C114.246 124.12 114.726 123.976 115.302 123.976C115.878 123.976 116.982 124.312 118.614 124.984L121.638 126.28C127.59 128.584 133.158 129.736 138.342 129.736C146.886 129.736 153.558 127.288 158.358 122.392C163.254 117.592 165.702 111.064 165.702 102.808V93.88C163.302 99.064 159.51 103.144 154.326 106.12C149.142 109 143.718 110.44 138.054 110.44C131.43 110.44 125.43 108.808 120.054 105.544C114.774 102.184 110.598 97.576 107.526 91.72C104.454 85.864 102.918 79.288 102.918 71.992C102.918 64.792 104.454 58.264 107.526 52.408C110.598 46.552 114.774 41.992 120.054 38.728C125.43 35.368 131.382 33.688 137.91 33.688C143.958 33.688 149.478 35.224 154.47 38.296C159.558 41.272 163.302 44.872 165.702 49.096V39.88C165.702 38.632 166.086 37.576 166.854 36.712C167.718 35.848 168.774 35.416 170.022 35.416ZM138.774 102.376C144.054 102.376 148.758 101.128 152.886 98.632C157.11 96.04 160.374 92.44 162.678 87.832C165.078 83.128 166.278 77.848 166.278 71.992C166.278 66.136 165.078 60.904 162.678 56.296C160.374 51.688 157.11 48.136 152.886 45.64C148.758 43.048 144.054 41.752 138.774 41.752C133.59 41.752 128.886 43.096 124.662 45.784C120.534 48.376 117.27 51.976 114.87 56.584C112.566 61.192 111.414 66.328 111.414 71.992C111.414 77.752 112.566 82.936 114.87 87.544C117.27 92.152 120.534 95.8 124.662 98.488C128.886 101.08 133.59 102.376 138.774 102.376Z"
+                                    stroke="black" stroke-width="4" mask="url(#path-1-outside-1)" />
+                                <path class="logoPath"
+                                    d="M230.662 34.84C239.302 34.84 245.734 37.576 249.958 43.048C254.182 48.424 256.294 55.384 256.294 63.928V104.68C256.294 105.928 255.862 106.984 254.998 107.848C254.23 108.616 253.222 109 251.974 109C250.726 109 249.67 108.616 248.806 107.848C248.038 106.984 247.654 105.928 247.654 104.68V63.928C247.654 57.688 246.166 52.648 243.19 48.808C240.214 44.872 235.558 42.904 229.222 42.904C225.19 42.904 221.35 43.864 217.702 45.784C214.15 47.704 211.27 50.296 209.062 53.56C206.854 56.728 205.75 60.184 205.75 63.928V104.68C205.75 105.928 205.318 106.984 204.454 107.848C203.686 108.616 202.678 109 201.43 109C200.182 109 199.126 108.616 198.262 107.848C197.494 106.984 197.11 105.928 197.11 104.68V6.76C197.11 5.512 197.494 4.504 198.262 3.736C199.126 2.872 200.182 2.44 201.43 2.44C202.678 2.44 203.686 2.872 204.454 3.736C205.318 4.504 205.75 5.512 205.75 6.76V48.952C208.342 44.824 211.942 41.464 216.55 38.872C221.158 36.184 225.862 34.84 230.662 34.84Z"
+                                    stroke="black" stroke-width="4" mask="url(#path-1-outside-1)" />
+                                <path class="logoPath"
+                                    d="M293.354 43.768V92.008C293.354 95.656 294.026 98.152 295.37 99.496C296.714 100.744 298.49 101.368 300.698 101.368C301.274 101.368 301.994 101.272 302.858 101.08C303.722 100.792 304.394 100.648 304.874 100.648C305.738 100.648 306.458 101.032 307.034 101.8C307.706 102.472 308.042 103.288 308.042 104.248C308.042 105.592 307.274 106.744 305.738 107.704C304.202 108.568 302.378 109 300.266 109C297.674 109 295.37 108.76 293.354 108.28C291.338 107.8 289.37 106.36 287.45 103.96C285.626 101.56 284.714 97.72 284.714 92.44V43.768H274.202C273.05 43.768 272.042 43.384 271.178 42.616C270.41 41.848 270.026 40.888 270.026 39.736C270.026 38.584 270.41 37.624 271.178 36.856C272.042 36.088 273.05 35.704 274.202 35.704H284.714V19.72C284.714 18.472 285.098 17.464 285.866 16.696C286.73 15.832 287.786 15.4 289.034 15.4C290.282 15.4 291.29 15.832 292.058 16.696C292.922 17.464 293.354 18.472 293.354 19.72V35.704H307.754C308.81 35.704 309.722 36.136 310.49 37C311.354 37.864 311.786 38.824 311.786 39.88C311.786 41.032 311.402 41.992 310.634 42.76C309.866 43.432 308.906 43.768 307.754 43.768H293.354Z"
+                                    stroke="black" stroke-width="4" mask="url(#path-1-outside-1)" />
+                                <path class="logoPath"
+                                    d="M440.566 8.2C441.814 8.2 442.822 8.632 443.59 9.496C444.454 10.264 444.886 11.272 444.886 12.52V72.136C444.886 79.144 443.206 85.576 439.846 91.432C436.486 97.288 431.926 101.896 426.166 105.256C420.406 108.616 414.07 110.296 407.158 110.296C400.15 110.296 393.766 108.616 388.006 105.256C382.246 101.896 377.686 97.288 374.326 91.432C370.966 85.576 369.286 79.144 369.286 72.136V12.52C369.286 11.272 369.67 10.264 370.438 9.496C371.302 8.632 372.454 8.2 373.894 8.2C375.046 8.2 376.054 8.632 376.918 9.496C377.782 10.264 378.214 11.272 378.214 12.52V72.136C378.214 77.512 379.51 82.456 382.102 86.968C384.694 91.48 388.198 95.08 392.614 97.768C397.126 100.36 401.974 101.656 407.158 101.656C412.438 101.656 417.286 100.36 421.702 97.768C426.214 95.08 429.766 91.48 432.358 86.968C435.046 82.456 436.39 77.512 436.39 72.136V12.52C436.39 11.272 436.774 10.264 437.542 9.496C438.31 8.632 439.318 8.2 440.566 8.2Z"
+                                    stroke="black" stroke-width="4" mask="url(#path-1-outside-1)" />
+                                <path class="logoPath"
+                                    d="M504.774 34.84C511.11 34.84 516.87 36.472 522.054 39.736C527.238 42.904 531.27 47.368 534.15 53.128C537.126 58.792 538.614 65.176 538.614 72.28C538.614 79.48 537.126 85.96 534.15 91.72C531.27 97.384 527.238 101.848 522.054 105.112C516.966 108.376 511.254 110.008 504.918 110.008C499.35 110.008 494.214 108.712 489.51 106.12C484.902 103.432 481.206 99.88 478.422 95.464V133.48C478.422 134.728 477.99 135.736 477.126 136.504C476.358 137.368 475.35 137.8 474.102 137.8C472.854 137.8 471.798 137.368 470.934 136.504C470.166 135.736 469.782 134.728 469.782 133.48V39.592C469.782 38.344 470.166 37.288 470.934 36.424C471.798 35.56 472.854 35.128 474.102 35.128C475.35 35.128 476.358 35.56 477.126 36.424C477.99 37.288 478.422 38.344 478.422 39.592V49.384C480.918 44.872 484.518 41.32 489.222 38.728C493.926 36.136 499.11 34.84 504.774 34.84ZM504.054 101.944C509.046 101.944 513.51 100.696 517.446 98.2C521.478 95.608 524.598 92.056 526.806 87.544C529.11 83.032 530.262 77.944 530.262 72.28C530.262 66.712 529.11 61.72 526.806 57.304C524.598 52.792 521.478 49.288 517.446 46.792C513.51 44.2 509.046 42.904 504.054 42.904C498.966 42.904 494.406 44.152 490.374 46.648C486.342 49.144 483.222 52.648 481.014 57.16C478.806 61.576 477.702 66.616 477.702 72.28C477.702 77.944 478.806 83.032 481.014 87.544C483.222 92.056 486.342 95.608 490.374 98.2C494.406 100.696 498.966 101.944 504.054 101.944Z"
+                                    stroke="black" stroke-width="4" mask="url(#path-1-outside-1)" />
+                            </svg> </a>
+                    </div>
+                    
+                    <div class="col-lg-7 col-12 pl-0">
+                        <div class="toggle-container">
+                            <!--Used to switch color schemes, these preferences are saved to session storage-->
+                            <div class="color-buttons">
+                                <label class="btn-container btn-container-red">
+                                    <input type="radio" id="styleChoice1" name="set-style" value="red" checked />
+                                    <span class="btn-checkmark btn-checkmark-red"></span>
+                                </label>
+                                <label class="btn-container btn-container-orange">
+                                    <input type="radio" id="styleChoice6" name="set-style" value="orange" />
+                                    <span class="btn-checkmark btn-checkmark-orange"></span>
+                                </label>
+                                <label class="btn-container btn-container-yellow ">
+                                    <input type="radio" id="styleChoice2" name="set-style" value="yellow" />
+                                    <span class="btn-checkmark btn-checkmark-yellow"></span>
+                                </label>
+                                <label class="btn-container btn-container-blue">
+                                    <input type="radio" id="styleChoice3" name="set-style" value="blue" />
+                                    <span class="btn-checkmark btn-checkmark-blue"></span>
+                                </label>
+                                <label class="btn-container btn-container-green">
+                                    <input type="radio" id="styleChoice4" name="set-style" value="green" />
+                                    <span class="btn-checkmark btn-checkmark-green"></span>
+                                </label>
+                                <label class="btn-container btn-container-pink">
+                                    <input type="radio" id="styleChoice5" name="set-style" value="pink" />
+                                    <span class="btn-checkmark btn-checkmark-pink"></span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-2 mr-1 d-lg-none text-right"><button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button></div>
+            </div>
+        </div>
+        <!--Top navbar-->
+        <div class="container-fluid">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link nav-link-grey {% block navDate%}{% endblock %}" aria-current="page"
+                            href="{{ url_for('get_home') }}"><i class="fas fa-heart nav-icon color red"></i>
+                            Tech Date</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-link-grey {% block navGroup%}{% endblock %}"
+                            href="{{ url_for('get_home') }}"><i class="fas fa-code nav-icon color red"></i> Code
+                            Group</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-link-grey {% block navCommunity%}{% endblock %}"
+                            href="{{ url_for('get_home') }}" tabindex="-1"><i
+                                class="fas fa-star nav-icon color red"></i>
+                            Community Gathering</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link nav-link-grey dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fas fa-user nav-link nav-icon color red"></i> Sign in
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item {% block navRegister%}{% endblock %}"
+                                    href="{{ url_for('register') }}">Register</a></li>
+                            <li><a class="dropdown-item {% block navLogin%}{% endblock %}" href="#">Login</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<body>
+            <section>
+            <!--flashed messages-->
+            {% with messages = get_flashed_messages() %}
+            {% if messages %}
+            {% for message in messages %}
+            <div class="row ml-4">
+                <p class="center-align flashed-messsages">
+                    {{ message }}
+                </p>
+            </div>
+            {% endfor %}
+            {% endif %}
+            {% endwith %}
+        </section>
+    {% block content %}
+    {% endblock %}
+
+    <script src="./static/js/app.js"></script>
+    <script type="text/javascript"
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDw_c4mhpi8UoRoyIbp0mt4E3BUzPh5n6o&libraries=places&callback=initMap"
+        defer>
+    </script>
+    <script src="static/js/lightmap.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous">
+        </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js"
+        integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous">
+        </script>
+    {% block scripts %}
+    {% endblock %}
+</body>
+
+</html>

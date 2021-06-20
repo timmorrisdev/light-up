@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block content %}
+    <div class="container text-center intro">
+        <h2 class="color red">Connecting the LGBTQ Coding Community</h2>
+        <p id="intro-p">
+            It may feel isolating to live in a rural area far from the supports available to urban dwelling members of the
+            LGBTQ+ community. However, you are not alone. Light Up enables rural users to interact by lighting up our map
+            with events. These may include coding sessions as well as more casual meetups. Join us and light up our map to
+            show others they are not alone.
+        </p>
+    </div>
+    <div id="map" class="red color"></div>
+    <div id="users">
+        {% for user in users %}
+        <div class="card col-3">
+            <p>Username: {{ user.username }}</p>
+        </div>
+        {% endfor %}
+    </div>
+    {% endblock %}
+
+
+    

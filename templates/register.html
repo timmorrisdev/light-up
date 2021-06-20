@@ -1,0 +1,126 @@
+{% extends "base.html" %}
+{% block navRegister %}active{% endblock %}
+{% block content %}
+
+<div class="row ml-4">
+    <h3 class="center-align">Join the Light Up Community!</h3>
+</div>
+<div class="row pl-5 pr-5">
+    <form method="POST" action="{{ url_for('register') }}">
+        <div class="card mt-3 mb-3 p-4">
+            <!--username field-->
+            <div class="row">
+                <div class="input-field col-12">
+                    <i class="fas fa-user-plus prefix nav-icon color red"></i>
+                    <input id="username" name="username" type="text" minlength="4" max-length="15"
+                        pattern="^[a-zA-Z0-9]{4,15}$" class="validate" required>
+                    <label for="username">Choose a username</label>
+                </div>
+                <div class="col-12">
+                    <p class="hint-text">Between 4-15 characters long and only alphabet characters and numbers.
+                    </p>
+                </div>
+            </div>
+            <!--password field-->
+            <div class="row">
+                <div class="input-field col-12">
+                    <i class="fas fa-user-lock prefix nav-icon color red"></i>
+                    <input id="password" name="password" type="password" minlength="8" max-length="20"
+                        pattern="^[a-zA-Z0-9]{8,20}$" class="validate" required>
+                    <label for="password">Add a password</label>
+                </div>
+                <div class="col-12">
+                    <p class="hint-text">Between 8-15 characters long and only alphabet characters and numbers.
+                    </p>
+                </div>
+            </div>
+            <!--email field-->
+            <div class="row">
+                <div class="input-field col-12">
+                    <i class="fas fa-envelope prefix nav-icon color red"></i>
+                    <input id="email" name="email" type="email" class="validate" required>
+                    <label for="email">Email address</label>
+                </div>
+            </div>
+            <!--pronouns field-->
+            <div class="row">
+                <div class="col-12">
+                    <label class="my-1 mr-2" for="pronouns">Pronouns</label>
+                    <select class="validate custom-select my-1 mr-sm-2" id="pronouns" name="pronouns">
+                        <option selected>Choose...</option>
+                        <option value="They/Them">They/Them</option>
+                        <option value="She/Her">She/Her</option>
+                        <option value="He/Him">He/Him</option>
+                    </select>
+                </div>
+            </div>
+            <!--town field-->
+            <div class="row">
+                <div id="locationField" class="col-md-6 col-12">
+                    <input id="autocomplete" placeholder="Start typing a town name" class="search-boxes" type="text"
+                        name="autocomplete" />
+                    <label for="autocomplete">Your town</label>
+                </div>
+            </div>
+            <!--tech skills field-->
+            <div class="row">
+                <div class="input-field col-12">
+                    <i class="fas fa-code prefix nav-icon color red"></i>
+                    <input id="skills" name="skills" type="skills" class="validate" required>
+                    <label for="email">Your tech skills</label>
+                </div>
+            </div>
+            <!--open to date-->
+            <div class="row">
+                <div class="input-field col s12">
+                    <div class="switch">
+                        <i class="fas fa-heart prefix color red text-darken-4"></i><label for="date">Open to dating?</label>
+                        <select class="validate custom-select my-1 mr-sm-2" id="date" name="date">
+                            <option selected>Choose...</option>
+                            <option value="Yes">Yes</option>
+                            <option value="No">No</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <!--open to friends-->
+            <div class="row">
+                <div class="input-field col s12">
+                    <div class="switch">
+                        <i class="fas fa-heart prefix color red"></i>
+                        <label for="friends">Open to new friends?</label>
+                        <select class="validate custom-select my-1 mr-sm-2" id="friends" name="friends">
+                            <option selected>Choose...</option>
+                            <option value="Yes">Yes</option>
+                            <option value="No">No</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <!--about you-->
+            <div class="row">
+                <div class="input-field col-12"><i class="fas fa-quote-left prefix nav-icon color red"></i><label for="about">Tell us about yourself</label>
+                    <textarea class="form-control" id="about" name="about" rows="4"></textarea>
+                </div>
+            </div>
+            <!--register button-->
+            <div class="row mt-3">
+                <button type="submit" class="ml-3 col-4 btn color red btn-reg">Register <i
+                        class="fas fa-door-open"></i></button>
+            </div>
+        </div>
+    </form>
+</div>
+<!--Already a member link-->
+<div class="row">
+    <div class="col-12 ml-4">
+        <h5>Already a member?
+            <a href="{{ url_for('login') }}">Log in here.</a></h5>
+    </div>
+</div>
+{% block scripts %}
+
+<script src="/static/js/registration.js"></script>
+{% endblock %}
+
+{% endblock %}
