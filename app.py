@@ -25,6 +25,24 @@ def get_home():
     return render_template("index.html", users=users)
 
 
+@app.route("/code-group")
+def code_group():
+    users = mongo.db.users.find()
+    return render_template("code-group.html", users=users)
+
+
+@app.route("/gathering")
+def gathering():
+    users = mongo.db.users.find()
+    return render_template("gathering.html", users=users)
+
+
+@app.route("/tech-date")
+def tech_date():
+    users = mongo.db.users.find()
+    return render_template("tech-date.html", users=users)
+
+
 @app.route("/register", methods=["GET", "POST"])
 def register():
     if request.method == "POST":

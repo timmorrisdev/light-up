@@ -15,7 +15,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="static/css/style.css" />
 
 
   <title>Light Up!</title>
@@ -98,16 +98,16 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link nav-link-grey" aria-current="page" href="#"><i
+                            <a class="nav-link nav-link-grey" aria-current="page" href="tech-date.html"><i
                                     class="fas fa-heart nav-icon color red"></i>
                                 Tech Date</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link nav-link-grey" href="#"><i class="fas fa-code nav-icon color red"></i> Code
+                            <a class="nav-link nav-link-grey" href="code-group.html"><i class="fas fa-code nav-icon color red"></i> Code
                                 Group</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link nav-link-grey" href="#" tabindex="-1"><i
+                            <a class="nav-link nav-link-grey" href="gathering.html" tabindex="-1"><i
                                     class="fas fa-star nav-icon color red"></i>
                                 Community Gathering</a>
                         </li>
@@ -127,25 +127,135 @@
             </nav>
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-12">
-                        <p>Connecting the LGBTQ coding community</p>
+                    <!--Hero Image Placeholder Div-->
+                    <div class="hero-image color red">
+                      <h1>Join the Light Up Community Today!!</h1>
                     </div>
                 </div>
             </div>
         
     </header>
-    <h1 class="color red">Not the Only One</h1>
-    <p>
-        It may feel isolating to live in a rural area far from the supports available to urban dwelling members of the
-        LGBTQ+ community. However, you are not alone. Light Up enables rural users to interact by lighting up our map
-        with events. These may include coding sessions as well as more casual meetups. Join us and light up our map to
-        show others they are not alone.
-    </p>
+
+    <div class="about">
+        <h1 class="about-title color red">Light Up</h1>
+        <p>
+          Here at Light Up we reach out to the furthest corners of Irelands LGBTQ+ tech community to Connect, Create and
+          Discover the possibilities within rural Ireland. Light Up enables you to discover the LGBTQ+ tech community around
+          you by lighting up your area and letting others know that they are not alone. Host Virtual Events or come to one
+          of our Community Gatherings and help us spread Pride throughout Ireland. </p>
+      </div>
   
    <input id="search-box" placeholder="Start typing a city name" class="search-boxes" type="text">
-    <div id="map"></div>
+   <section class="map-event-section">
+    <div class="row">
+      <!--MAP-->
+      <div class="col-12 col-md-8" id="map"></div>
+      <!--Events Container-->
+      <div class="container col-12 col-md-4">
+        <h2 class="events-title color red">Up Coming Events</h2>
+        <div class="events-box">
+          <!--Event Cards-->
+          <div class="card" style="width: 20rem;">
+            <img src="https://images.unsplash.com/photo-1561057160-ce83b1bd72f4?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" class="card-img-top" alt="Two cups of Coffee">
+            <div class="card-body">
+              <h5 class="card-title"><i class="fas fa-users color red"></i> End of Pride</h5>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item"><strong>Loacation:</strong> Galway</li>
+                <li class="list-group-item"><strong>Date:</strong> 25/6/2021</li>
+                <li class="list-group-item"><strong>Time:</strong> 18:00</li>
+              </ul>
+              <p class="card-text">It may be the end of pride month, but we will always be proud. Join us in celebrating </p>
+            </div>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#eventmodal">Register</button>
+          </div>
 
+          <div class="card" style="width: 20rem;">
+            <img src="https://images.unsplash.com/photo-1501504905252-473c47e087f8?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=667&q=80" class="card-img-top" alt="Two cups of Coffee">
+            <div class="card-body">
+              <h5 class="card-title"><i class="fas fa-laptop color red"></i> Virtual Coffee and Code Meet-Up</h5>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item"><strong>Loacation:</strong> Virtual</li>
+                <li class="list-group-item"><strong>Date:</strong> 25/6/2021</li>
+                <li class="list-group-item"><strong>Time:</strong> 13:00</li>
+              </ul>
+              <p class="card-text">Get together with the Light Up community and discuss the two of things that a Software Developer cant live without. Coffee and Code!!</p>
+            </div>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#eventmodal">Register</button>
+          </div>
 
+          <div class="card" style="width: 20rem;">
+            <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1050&q=80" class="card-img-top" alt="Two cups of Coffee">
+            <div class="card-body">
+              <h5 class="card-title"><i class="fas fa-laptop color red"></i> Hackathon</h5>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item"><strong>Loacation:</strong> Virtual</li>
+                <li class="list-group-item"><strong>Date:</strong> 2/12/2021</li>
+                <li class="list-group-item"><strong>Time:</strong> 10:00</li>
+              </ul>
+              <p class="card-text">Get the chance to work in a team and inspire eachother to create. Loads of people love taking part in Light Up Hackathons.</p>
+            </div>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#eventmodal">Register</button>
+          </div>
+
+          <div class="card" style="width: 20rem;">
+            <img src="https://images.unsplash.com/photo-1553242072-345b34e7b55b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80" class="card-img-top" alt="Two cups of Coffee">
+            <div class="card-body">
+              <h5 class="card-title"><i class="fas fa-users color red"></i>Pride of Life</h5>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item"><strong>Loacation:</strong>Cork</li>
+                <li class="list-group-item"><strong>Date:</strong> 5/9/2021</li>
+                <li class="list-group-item"><strong>Time:</strong> All Day</li>
+              </ul>
+              <p class="card-text">Come together to celebrate artisan crafts and small businesses run by people in the LGBTQ+ community. There will be live music and plenty of activities for everyone to take part in.</p>
+            </div>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#eventmodal">
+              >Register</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--Footer-->
+  <footer>
+    <div class="container">
+        <div class="social-links">
+          <ul class="list-inline">
+          <li class="list-inline-item"><a href="www-facebook.com" target="_blank"><i class="fab fa-facebook-square color red"></i></a></li>
+          <li class="list-inline-item"><a href="www.instagram.com" target="_blank"><i class="fab fa-instagram-square color red"></i></a></li>
+          <li class="list-inline-item"><a href="www.github.com" target="_blank"><i class="fab fa-github-square color red"></i></a></li>
+          </ul>
+        </div>
+    </div>
+  </footer>
+
+  <!--Event Registration Modal-->
+  <div class="modal" id="eventmodal" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title ml-auto mr-auto">Pride Event Registration</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form action="">
+            <label for="first-name">First Name</label>
+            <input type="text" name="first-name" id="first-name" required>
+            <br>
+            <label for="last-name">Last Name</label>
+            <input type="text" name="last-name" id="last-name" required>
+            <br>
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" placeholder="email@address.com" required>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn color red" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn color red">Confirm</button>
+        </div>
+      </div>
+    </div>
+  </div>
     <script src="./assets/js/app.js"></script>
     <script type="text/javascript"
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDw_c4mhpi8UoRoyIbp0mt4E3BUzPh5n6o&callback=initMap"

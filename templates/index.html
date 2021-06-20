@@ -10,13 +10,15 @@
         </p>
     </div>
     <div id="map" class="red color"></div>
+    <!--
     <div id="users">
         {% for user in users %}
         <div class="card col-3">
             <p>Username: {{ user.username }}</p>
         </div>
-        {% endfor %}
     </div>
+    {% endfor %}
+    -->
 <!--User info boxes-->
 {% for user in users %}
 <div style="display: none;">
@@ -24,25 +26,25 @@
         <div class="iw_attribute_name col-4">Username:</div>
         <div id="iw-name" class="col-8">{{ user.username }}</div>
     </div>
-    <div id="iw-phone-row" class="iw_table_row row">
+    <div id="iw-pronoun-row" class="iw_table_row row">
         <div class="iw_attribute_name col-4">Pronouns:</div>
         <div id="iw-phone" class="col-8">{{ user.pronuon}}</div>
     </div>
-    <div id="iw-rating-row" class="iw_table_row row">
+    <div id="iw-town-row" class="iw_table_row row">
         <div class="iw_attribute_name col-4">Town:</div>
         <div id="iw-rating" class="col-8">{{ user.address}}</div>
     </div>
-    <div id="iw-rating-row" class="iw_table_row row">
+    <div id="iw-skills-row" class="iw_table_row row">
         <div class="iw_attribute_name col-4">Tech Skills:</div>
         <div id="iw-rating" class="col-8">{{ user.tech_skills}}</div>
     </div>
-    <div id="iw-rating-row" class="iw_table_row row">
+    <div id="iw-date-row" class="iw_table_row row">
         <div class="iw_attribute_name col-4">Open to date?</div>
         <div id="iw-rating" class="col-8">{{ user.date}}</div>
     </div>
-        <div id="iw-rating-row" class="iw_table_row row">
-        <div class="iw_attribute_name col-4">Open to date?</div>
-        <div id="iw-rating" class="col-8">{{ user.date}}</div>
+        <div id="iw-friends-row" class="iw_table_row row">
+        <div class="iw_attribute_name col-4">Looking for friends?</div>
+        <div id="iw-rating" class="col-8">{{ user.friends}}</div>
     </div>
             <div id="iw-rating-row" class="iw_table_row row">
         <div class="iw_attribute_name col-4">Open to new friends?</div>

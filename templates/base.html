@@ -16,7 +16,8 @@
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="static/css/style.css" />
-    <link rel="shortcut icon" type="image/png" href="static/images/light-up-120.png" />
+    <link rel="shortcut icon" type="image/png" href="../static/images/light-up-120.png" />
+
     {% block styles %}
     {% endblock %}
     
@@ -26,7 +27,7 @@
     <nav class="pt-3 mb-2 navbar navbar-expand-lg navbar-light bg-light">
         <!--Logo-->
         <div class="container-fluid">
-            <div class="row mb-2">
+            <div class="row mb-2 logo-buttons">
                 <div class="col-9 col-lg-12">
                     <div class="col-lg-5 col-12 mb-3 pr-0"><a href="{{ url_for('get_home') }}">
                             <svg id="logo" width="270" height="70" viewBox="0 0 541 140" fill="none"
@@ -86,7 +87,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-2 mr-1 d-lg-none"><button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                <div class="col-2 mr-1 d-lg-none text-right"><button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                         data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
@@ -99,17 +100,17 @@
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
                         <a class="nav-link nav-link-grey {% block navDate%}{% endblock %}" aria-current="page"
-                            href="{{ url_for('get_home') }}"><i class="fas fa-heart nav-icon color red"></i>
+                            href="{{ url_for('tech_date') }}"><i class="fas fa-heart nav-icon color red"></i>
                             Tech Date</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link nav-link-grey {% block navGroup%}{% endblock %}"
-                            href="{{ url_for('get_home') }}"><i class="fas fa-code nav-icon color red"></i> Code
+                            href="{{ url_for('code_group') }}"><i class="fas fa-code nav-icon color red"></i> Code
                             Group</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link nav-link-grey {% block navCommunity%}{% endblock %}"
-                            href="{{ url_for('get_home') }}" tabindex="-1"><i
+                            href="{{ url_for('gathering') }}" tabindex="-1"><i
                                 class="fas fa-star nav-icon color red"></i>
                             Community Gathering</a>
                     </li>
@@ -128,15 +129,7 @@
             </div>
         </div>
     </nav>
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-12">
-                <p>Connecting the LGBTQ coding community</p>
-            </div>
-        </div>
-    </div>
 </header>
-
 <body>
             <section>
             <!--flashed messages-->
@@ -155,11 +148,72 @@
     {% block content %}
     {% endblock %}
 
+    <!--Footer-->
+    <footer>
+        <div class="container-fluid footer">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="footer-card">
+                        <h4>Contact Us</h4>
+                        <div><i class="fas fa-phone color red"></i> lightup@gmail.com</div>
+                        <div><i class="fas fa-envelope color red"></i> +35315397235</div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                        <div class="footer-card">
+                            <h4>Designed By</h4>
+                            <a href="https://github.com/TimMorrisDev" target="_blank" class="color red">TimMorrisDev</a>
+                            <a href="https://github.com/Jade-ux" target="_blank" class="color red">Jade-ux</a>
+                            <a href="https://github.com/Sean-Mc-Mahon" target="_blank" class="color red">Sean-Mc-Mahon</a>
+                            <a href="https://github.com/mikemurtagh" target="_blank" class="color red">mikemurtagh</a>
+                            <a href="https://github.com/Brian-FullStack" target="_blank" class="color red">Brian-FullStack</a>
+                            <a href="https://github.com/ChronoLogic12" target="_blank" class="color red">ChronoLogic12</a>
+                        </div>
+                    </div>
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="footer-card">
+                        <a href="https://www.privacypolicies.com/live/596f739b-9fac-420b-b8cd-9aaef76fa821"  class="color red" target="_blank"><h4>Privacy Policy</h4></a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="footer-card social-links">
+                        <a href="https://www.facebook.com/"  target="_blank"><i class="fab fa-facebook color red"></i></a>
+                        <a href="https://www.github.com/"  target="_blank"><i class="fab fa-github color red"></i></a>
+                        <a href="https://www.twitter.com/"  target="_blank"><i class="fab fa-twitter color red"></i></a>
+                    </div>  
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="footer-card">
+                        <article>
+                            <strong class="color red">"Light Up"</strong> came to fruition as the result of a Hackathon being undertaken by current students and Alumni at Code Institute in June 2021.
+    The brief for our Hackathon is to build something that promotes and celebrates the LGBTQ+ community. We were therefore tasked with finding
+    solutions that amplify LGBTQ+ voices, connect the community, educate others and support the needs of LGBT+ people.
+    We designed and created an application which would allow members of the LGBTQ+ community in rural Ireland (with a passion for Coding and Tech),
+    to connect seamlessly with other users who share a similar interest.
+    In order to fulfil the brief and Hackacthon spec, our Application allows users to find upcoming events and either attend a physical event or create/join
+    a virtual event in the West of Ireland. The aim is to therefore allow such users feel a sense of inclusivity and belonging without having to travel
+    to Dublin which is typically the hub of gay life in Ireland. Networking and making connections is a huge part of allowing people to come together.
+    They will have a safe zone in which to make new acquaintances, attend virtual workshops, or attend in-person conferences, all with the underlying
+    theme of Community.
+    We are extremely proud to deliver and submit this project as part of the Pride Hackathon at Code Institute.
+    #ProudCoders
+                        </article>
+                        <br>
+                        <div>Copyright © Team 5, Pride Hackathon 2021</div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </footer> 
+
+
     <script src="./static/js/app.js"></script>
     <script type="text/javascript"
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDw_c4mhpi8UoRoyIbp0mt4E3BUzPh5n6o&libraries=places&callback=initMap"
         defer>
-        </script>
+    </script>
     <script src="static/js/lightmap.js"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
