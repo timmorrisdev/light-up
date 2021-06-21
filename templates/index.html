@@ -22,37 +22,21 @@
 <!--User info boxes-->
 {% for user in users %}
 <div style="display: none;">
-    <div id="info-content" class="container">
-        <div class="iw_attribute_name col-4">Username:</div>
-        <div id="iw-name" class="col-8">{{ user.username }}</div>
-    </div>
-    <div id="iw-pronoun-row" class="iw_table_row row">
-        <div class="iw_attribute_name col-4">Pronouns:</div>
-        <div id="iw-phone" class="col-8">{{ user.pronuon}}</div>
-    </div>
-    <div id="iw-town-row" class="iw_table_row row">
-        <div class="iw_attribute_name col-4">Town:</div>
-        <div id="iw-rating" class="col-8">{{ user.address}}</div>
-    </div>
-    <div id="iw-skills-row" class="iw_table_row row">
-        <div class="iw_attribute_name col-4">Tech Skills:</div>
-        <div id="iw-rating" class="col-8">{{ user.tech_skills}}</div>
-    </div>
-    <div id="iw-date-row" class="iw_table_row row">
-        <div class="iw_attribute_name col-4">Open to date?</div>
-        <div id="iw-rating" class="col-8">{{ user.date}}</div>
-    </div>
-    <div id="iw-friends-row" class="iw_table_row row">
-        <div class="iw_attribute_name col-4">Looking for friends?</div>
-        <div id="iw-rating" class="col-8">{{ user.friends}}</div>
-    </div>
-    <div id="iw-rating-row" class="iw_table_row row">
-        <div class="iw_attribute_name col-4">Open to new friends?</div>
-        <div id="iw-rating" class="col-8">{{ user.friends}}</div>
-    </div>
-    <div id="iw-rating-row" class="iw_table_row row">
-        <div class="iw_attribute_name col-12">About {{ user.pronuon}}</div>
-        <div id="iw-rating" class="col-12">{{ user.about_me}}</div>
+    <div id="info-content-events" class="container">
+        <div class="iw_attribute_name col-4">Name:</div>
+        <div id="iw-event-name" class="col-8"></div>
+        <div id="iw-pronoun-row" class="iw_table_row row">
+            <div class="iw_attribute_name col-4">Date:</div>
+            <div id="iw-event-date" class="col-8"></div>
+        </div>
+        <div id="iw-town-row" class="iw_table_row row">
+            <div class="iw_attribute_name col-4">Time:</div>
+            <div id="iw-event-time" class="col-8"></div>
+        </div>
+        <div id="iw-skills-row" class="iw_table_row row">
+            <div class="iw_attribute_name col-4">Place:</div>
+            <div id="iw-event-place" class="col-8"></div>
+        </div>
     </div>
 </div>
 </div>

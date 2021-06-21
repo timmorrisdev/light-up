@@ -313,7 +313,10 @@ function initMap() {
             position: location,
             map: map,
             icon: "static/images/pride-pin-simple.png",
+
         });
+
+        marker.url = url = 'http://light-up-pride.herokuapp.com/code-group/';
 
         //change icon to be lit
         marker.addListener("mouseover", () => {
@@ -329,7 +332,24 @@ function initMap() {
 
     for (let i in people) {
 
-        addMarker(people[i].latLng);
+        let peopleName = people[i].name;
+        console.log(peopleName);
+
+        // const infowindow = new google.maps.InfoWindow({
+        //     content: peopleName,
+        // });
+
+
+        const marker = addMarker(people[i].latLng);
+
+        // marker.addListener("click", () => {
+        //     infowindow.open({
+        //         anchor: marker,
+        //         map,
+        //         shouldFocus: false,
+        //     });
+        // });
+
 
     };
 
@@ -419,6 +439,7 @@ function initMap() {
     };
 
     for (let i in events) {
+
         addMarker(events[i].latLng)
 
     };
@@ -433,4 +454,20 @@ function initMap() {
     // marker.addListener("mouseout", () => {
     //     infoWindow.close(map, marker);
     // });
+
+
 }
+
+/*
+
+function showInfoWindow() {
+    const marker = this;
+    buildIWContent(people);
+    infoWindow.open(map, marker);
+}
+
+function buildIWContent(people) {
+    document.getElementById("iw-event-name").textContent = people.person1.name;
+}
+
+*/
