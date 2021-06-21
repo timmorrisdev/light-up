@@ -493,6 +493,16 @@ footer{
     padding: 5px 46px;
 }
 
+.card-img-centered {
+    border-radius: 50%;
+    height: 16rem;
+    width: 100%;
+    margin: auto;
+    padding: 5px 46px;
+    background-position: center center;
+    background-size: 18rem;
+}
+
 /*---------------------------------------------------Forms & Buttons*/
 
 .btn-reg {
