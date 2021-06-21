@@ -1,16 +1,17 @@
 {% extends "base.html" %}
 {% block content %}
-    <div class="container text-center intro">
-        <h2 class="color red">Connecting the LGBTQ Coding Community</h2>
-        <p id="intro-p">
-            It may feel isolating to live in a rural area far from the supports available to urban dwelling members of the
-            LGBTQ+ community. However, you are not alone. Light Up enables rural users to interact by lighting up our map
-            with events. These may include coding sessions as well as more casual meetups. Join us and light up our map to
-            show others they are not alone.
-        </p>
-    </div>
-    <div id="map" class="red color mb-5"></div>
-    <!--
+<div class="container text-center intro">
+    <h2 class="color red">Connecting the LGBTQ Coding Community</h2>
+    <p id="intro-p">
+        It may feel isolating to live in a rural area far from the supports available to urban dwelling members of the
+        LGBTQ+ community. However, you are not alone. Light Up enables rural users to interact by lighting up our map
+        with events. These may include coding sessions as well as more casual meetups. Join us and light up our map to
+        show others they are not alone.
+    </p>
+</div>
+<input id="search-box" placeholder="Start typing a city name" class="search-boxes" type="text">
+<div id="map" class="red color mb-5"></div>
+<!--
     <div id="users">
         {% for user in users %}
         <div class="card col-3">
@@ -41,15 +42,15 @@
         <div class="iw_attribute_name col-4">Open to date?</div>
         <div id="iw-rating" class="col-8">{{ user.date}}</div>
     </div>
-        <div id="iw-friends-row" class="iw_table_row row">
+    <div id="iw-friends-row" class="iw_table_row row">
         <div class="iw_attribute_name col-4">Looking for friends?</div>
         <div id="iw-rating" class="col-8">{{ user.friends}}</div>
     </div>
-            <div id="iw-rating-row" class="iw_table_row row">
+    <div id="iw-rating-row" class="iw_table_row row">
         <div class="iw_attribute_name col-4">Open to new friends?</div>
         <div id="iw-rating" class="col-8">{{ user.friends}}</div>
     </div>
-                <div id="iw-rating-row" class="iw_table_row row">
+    <div id="iw-rating-row" class="iw_table_row row">
         <div class="iw_attribute_name col-12">About {{ user.pronuon}}</div>
         <div id="iw-rating" class="col-12">{{ user.about_me}}</div>
     </div>
