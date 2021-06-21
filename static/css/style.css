@@ -16,6 +16,8 @@ body {
     background-size: cover; */
     height: 100vh; 
     font-family: 'Montserrat', sans-serif;
+    background: rgb(10, 27, 44);
+    color: white;
 }
 
 
