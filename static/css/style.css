@@ -490,11 +490,11 @@ footer{
 }
 
 .card-img-top-pic{
-  border-radius: 50%;
-  height: 15rem;
-  width: 15rem;
-  margin: auto;
-  padding: 5px
+    border-radius: 50%;
+    height: 14rem;
+    width: 100%;
+    margin: auto;
+    padding: 5px 46px;
 }
 
 /*---------------------------------------------------Forms & Buttons*/
@@ -504,9 +504,9 @@ footer{
 }
 
 .hint-text {
-    color:#28282d;
-    font-size: 0.9rem;
-    padding-left: 45px;
+    color: #495057;
+    font-size: 0.8rem;
+    margin-top: 10px;
 }
 
 /*---------------------------------------------------Footer*/
@@ -562,4 +562,8 @@ footer{
 
 .card {
     display: inline-block;
+}
+
+.form-card {
+    width: 100%
 }
