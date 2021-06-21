@@ -530,7 +530,14 @@ footer{
 }
 
 .form-card label {
-    color: black;
+    color: white;
+}
+
+.form-card {
+    width: 100%;
+    background-color: #232f3a;
+    border: none;
+    color: white;
 }
 
 /*---------------------------------------------------Footer*/
@@ -586,8 +593,4 @@ footer{
 
 .card {
     display: inline-block;
-}
-
-.form-card {
-    width: 100%
 }
