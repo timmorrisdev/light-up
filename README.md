@@ -118,7 +118,7 @@ Icons, map pins and favicon created by the team using [Affinity Designer](https:
 The footer features: 
 - Footer features creator information, privacy policy, social links and contact information
 
-## Existing Features
+## Features Left To Implement
 
 #### Event Registration
 
