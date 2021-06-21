@@ -2,149 +2,157 @@
 {% block navRegister %}active{% endblock %}
 {% block content %}
 
-<div class="row ml-4">
-    <h3 class="color red">Join the Light Up Community!</h3>
+<div class="row ml-5">
+    <div class="col-12">
+        <h3 class="color red">Join the Light Up Community!</h3>
+    </div>
+    <div class="col-12">
+        <p>When you sign up your profile will show on our <a href="{{ url_for('code_group') }}">community group
+                page.</a>
+        </p>
+    </div>
 </div>
 <div class="row pl-5 pr-5">
-<div class="col-12">
-    <form method="POST" action="{{ url_for('register') }}">
-        <div class="card form-card mt-3 mb-3 p-4">
-            <!--username field-->
-            <div class="row">
-                <div class="input-field col-12 col-md-6">
-                    <div class="row">
-                        <div class="col-12">
-                            <i class="fas fa-user-plus prefix nav-icon color red"></i>
-                            <label for="username"> Choose a username</label>
+    <div class="col-12">
+        <form method="POST" action="{{ url_for('register') }}">
+            <div class="card form-card mt-3 mb-3 p-4">
+                <!--username field-->
+                <div class="row">
+                    <div class="input-field col-12 col-md-6">
+                        <div class="row">
+                            <div class="col-12">
+                                <i class="fas fa-user-plus prefix nav-icon color red"></i>
+                                <label for="username"> Choose a username</label>
+                            </div>
                         </div>
+                        <input id="username" name="username" type="text" minlength="4" max-length="15"
+                            pattern="^[a-zA-Z0-9]{4,15}$" class="validate" required>
+                        <p class="hint-text">Between 4-15 characters, alphabet characters and numbers.
+                        </p>
                     </div>
-                    <input id="username" name="username" type="text" minlength="4" max-length="15"
-                        pattern="^[a-zA-Z0-9]{4,15}$" class="validate" required>
-                    <p class="hint-text">Between 4-15 characters, alphabet characters and numbers.
-                    </p>
+                    <!--password field-->
+                    <div class="input-field col-12 col-md-6">
+                        <div class="row">
+                            <div class="col-12">
+                                <i class="fas fa-user-lock prefix nav-icon color red"></i> <label for="password">Add a
+                                    password</label>
+                            </div>
+                        </div>
+                        <input id="password" name="password" type="password" minlength="8" max-length="20"
+                            pattern="^[a-zA-Z0-9]{8,20}$" class="validate" required>
+                        <p class="hint-text">Between 8-15 characters, alphabet characters and numbers.
+                        </p>
+                    </div>
                 </div>
-                <!--password field-->
-                <div class="input-field col-12 col-md-6">
-                    <div class="row">
-                        <div class="col-12">
-                            <i class="fas fa-user-lock prefix nav-icon color red"></i> <label for="password">Add a
-                                password</label>
+                <!--email field-->
+                <div class="row">
+                    <div class="input-field col-12 col-md-6">
+                        <div class="row">
+                            <div class="col-12">
+                                <i class="fas fa-envelope prefix nav-icon color red"></i> <label for="email">Email
+                                    address</label>
+                            </div>
                         </div>
+                        <input id="email" name="email" type="email" class="validate" required>
                     </div>
-                    <input id="password" name="password" type="password" minlength="8" max-length="20"
-                        pattern="^[a-zA-Z0-9]{8,20}$" class="validate" required>
-                    <p class="hint-text">Between 8-15 characters, alphabet characters and numbers.
-                    </p>
+                    <!--pronouns field-->
+                    <div class="col-12 col-md-6">
+                        <div class="row">
+                            <div class="col-12">
+                                <label class="my-1 mr-2" for="pronouns">Pronouns</label>
+                            </div>
+                        </div>
+                        <select class="validate custom-select my-1 mr-sm-2" id="pronouns" name="pronouns">
+                            <option selected>Choose...</option>
+                            <option value="They/Them">They/Them</option>
+                            <option value="She/Her">She/Her</option>
+                            <option value="He/Him">He/Him</option>
+                        </select>
+                    </div>
+                </div>
+                <!--town field-->
+                <div class="row mt-3">
+                    <div id="locationField" class="col-md-6 col-12">
+                        <div class="row">
+                            <div class="col-12 mb-2">
+                                <i class="fas fa-map-marker-alt prefix nav-icon color red"></i><label
+                                    for="autocomplete"></label>
+                                Your
+                                town</label>
+                            </div>
+                        </div>
+                        <input id="autocomplete" placeholder="Start typing a town name" class="search-boxes" type="text"
+                            name="autocomplete"/>
+                    </div>
+                    <!--tech skills field-->
+                    <div class="input-field col-12 col-md-6">
+                        <div class="row">
+                            <div class="col-12">
+                                <i class="fas fa-code prefix nav-icon color red"></i> <label for="email"> Your tech
+                                    skills</label>
+                            </div>
+                        </div>
+                        <input id="skills" name="skills" type="text" class="validate" required>
+                    </div>
+                </div>
+                <!--open to date-->
+                <div class="row mt-3">
+                    <div class="input-field col-12 col-md-6">
+                        <div class="row">
+                            <div class="col-12">
+                                <i class="fas fa-heart prefix color red text-darken-4"></i><label for="date"> Open to
+                                    dating?</label>
+                            </div>
+                        </div>
+                        <select class="validate custom-select my-1 mr-sm-2" id="date" name="date">
+                            <option selected>Choose...</option>
+                            <option value="Yes">Yes</option>
+                            <option value="No">No</option>
+                        </select>
+                    </div>
+                    <!--open to friends-->
+                    <div class="input-field col-12 col-md-6">
+                        <div class="row">
+                            <div class="col-12">
+                                <i class="fas fa-heart prefix color red"></i>
+                                <label for="friends">Open to new friends?</label>
+                            </div>
+                        </div>
+                        <select class="validate custom-select my-1 mr-sm-2" id="friends" name="friends">
+                            <option selected>Choose...</option>
+                            <option value="Yes">Yes</option>
+                            <option value="No">No</option>
+                        </select>
+                    </div>
+                </div>
+                <!--image url-->
+                <div class="row mt-3">
+                    <div class="input-field col-12">
+                        <div class="row">
+                            <div class="col-12">
+                                <i class="fas fa-image prefix nav-icon color red"></i> <label for="image">Image URL
+                                    (recommended size: 800 x 600px)</label>
+                            </div>
+                        </div>
+                        <input id="image" name="image" type="text" class="validate col-12" required>
+                    </div>
+                </div>
+                <!--about you-->
+                <div class="row mt-3">
+                    <div class="input-field col-12"><i class="fas fa-quote-left prefix nav-icon color red"></i><label
+                            for="about"> Tell us about yourself</label>
+                        <textarea class="form-control" id="about" name="about" rows="4"></textarea>
+                    </div>
+                </div>
+                <!--register button-->
+                <div class="row mt-3">
+                    <div class="col-12">
+                        <button type="submit" class="col-md-4 col-12 btn color red btn-reg">Register <i
+                                class="fas fa-door-open"></i></button>
+                    </div>
                 </div>
             </div>
-            <!--email field-->
-            <div class="row">
-                <div class="input-field col-12 col-md-6">
-                    <div class="row">
-                        <div class="col-12">
-                            <i class="fas fa-envelope prefix nav-icon color red"></i> <label for="email">Email
-                                address</label>
-                        </div>
-                    </div>
-                    <input id="email" name="email" type="email" class="validate" required>
-                </div>
-                <!--pronouns field-->
-                <div class="col-12 col-md-6">
-                    <div class="row">
-                        <div class="col-12">
-                            <label class="my-1 mr-2" for="pronouns">Pronouns</label>
-                        </div>
-                    </div>
-                    <select class="validate custom-select my-1 mr-sm-2" id="pronouns" name="pronouns">
-                        <option selected>Choose...</option>
-                        <option value="They/Them">They/Them</option>
-                        <option value="She/Her">She/Her</option>
-                        <option value="He/Him">He/Him</option>
-                    </select>
-                </div>
-            </div>
-            <!--town field-->
-            <div class="row mt-3">
-                <div id="locationField" class="col-md-6 col-12">
-                    <div class="row">
-                        <div class="col-12">
-                            <i class="fas fa-map-marker-alt prefix nav-icon color red"></i><label
-                                for="autocomplete"></label>
-                            Your
-                            town</label>
-                        </div>
-                    </div>
-                    <input id="autocomplete" placeholder="Start typing a town name" class="search-boxes" type="text"
-                        name="autocomplete" />
-                </div>
-                <!--tech skills field-->
-                <div class="input-field col-12 col-md-6">
-                    <div class="row">
-                        <div class="col-12">
-                            <i class="fas fa-code prefix nav-icon color red"></i> <label for="email"> Your tech
-                                skills</label>
-                        </div>
-                    </div>
-                    <input id="skills" name="skills" type="text" class="validate" required>
-                </div>
-            </div>
-            <!--open to date-->
-            <div class="row mt-3">
-                <div class="input-field col-12 col-md-6">
-                    <div class="row">
-                        <div class="col-12">
-                            <i class="fas fa-heart prefix color red text-darken-4"></i><label for="date"> Open to
-                                dating?</label>
-                        </div>
-                    </div>
-                    <select class="validate custom-select my-1 mr-sm-2" id="date" name="date">
-                        <option selected>Choose...</option>
-                        <option value="Yes">Yes</option>
-                        <option value="No">No</option>
-                    </select>
-                </div>
-                <!--open to friends-->
-                <div class="input-field col-12 col-md-6">
-                    <div class="row">
-                        <div class="col-12">
-                            <i class="fas fa-heart prefix color red"></i>
-                            <label for="friends">Open to new friends?</label>
-                        </div>
-                    </div>
-                    <select class="validate custom-select my-1 mr-sm-2" id="friends" name="friends">
-                        <option selected>Choose...</option>
-                        <option value="Yes">Yes</option>
-                        <option value="No">No</option>
-                    </select>
-                </div>
-            </div>
-            <!--image url-->
-            <div class="row mt-3">
-                <div class="input-field col-12">
-                    <div class="row">
-                        <div class="col-12">
-                            <i class="fas fa-image prefix nav-icon color red"></i> <label for="email">image URL</label>
-                        </div>
-                    </div>
-                    <input id="image" name="image" type="text" class="validate col-12" required>
-                </div>
-            </div>
-            <!--about you-->
-            <div class="row mt-3">
-                <div class="input-field col-12"><i class="fas fa-quote-left prefix nav-icon color red"></i><label
-                        for="about"> Tell us about yourself</label>
-                    <textarea class="form-control" id="about" name="about" rows="4"></textarea>
-                </div>
-            </div>
-            <!--register button-->
-            <div class="row mt-3">
-                <div class="col-12">
-                    <button type="submit" class="col-md-4 col-12 btn color red btn-reg">Register <i
-                            class="fas fa-door-open"></i></button>
-                </div>
-            </div>
-        </div>
-    </form>
+        </form>
     </div>
 </div>
 <!--Already a member link-->
@@ -155,8 +163,11 @@
     </div>
 </div>
 {% block scripts %}
-
 <script src="/static/js/registration.js"></script>
+<script type="text/javascript"
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAbcTamNPI1Pe4MAqwMqq6JYO3z_zwwwuY&callback=initMap&libraries=places&v=weekly"
+    defer>
+</script>
 {% endblock %}
 
 {% endblock %}
