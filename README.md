@@ -29,8 +29,7 @@ Light Up is Team 5's entry for the [Code Institute](https://codeinstitute.net/) 
 </details>
 
 **<details><summary>Technologies Used</summary>**
-* [**_Libraries_**](#libraries)
-* [**_Version Control_**](#version-control)
+* [**_Technologies_**](#technologies-used)
 </details>
 
 **<details><summary>Testing</summary>**
