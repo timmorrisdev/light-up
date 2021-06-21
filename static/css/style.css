@@ -627,3 +627,7 @@ footer{
 .card {
     display: inline-block;
 }
+
+#info-content-events {
+  min-height: fit-content;
+}
