@@ -415,7 +415,6 @@ function initMap() {
             marker.setIcon("static/images/pride-pin-simple.png");
         });
 
-
     };
 
     for (let i in events) {
@@ -430,18 +429,7 @@ function initMap() {
 }
 
 function buildIWContent(people) {
-    console.log(people.person1.name)
     document.getElementById("iw-event-name").textContent = people.person1.name;
 }
 
-    //info window
-
-
-    // marker.addListener("mouseover", () => {
-    //     infoWindow.open(map, marker);
-    // });
-
-    // marker.addListener("mouseout", () => {
-    //     infoWindow.close(map, marker);
-    // });
 }
