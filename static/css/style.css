@@ -529,6 +529,10 @@ footer{
     margin-top: 10px;
 }
 
+.form-card label {
+    color: black;
+}
+
 /*---------------------------------------------------Footer*/
 
 .footer .row {
