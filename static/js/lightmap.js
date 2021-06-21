@@ -422,6 +422,17 @@ function initMap() {
         addMarker(events[i].latLng)
 
     };
+    
+    function showInfoWindow() {
+    const marker = this;
+    buildIWContent(people);
+    infoWindow.open(map, marker);
+}
+
+function buildIWContent(people) {
+    console.log(people.person1.name)
+    document.getElementById("iw-event-name").textContent = people.person1.name;
+}
 
     //info window
 
