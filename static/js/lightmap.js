@@ -106,16 +106,16 @@ function initMap() {
         const marker = new google.maps.Marker({
             position: location,
             map: map,
-            icon: "assets/images/pride-pin-simple.png"
+            icon: "static/images/pride-pin-simple.png"
         });
 
         //change icon to be lit
         marker.addListener("mouseover", () => {
-            marker.setIcon("assets/images/pride-pin-lit.png");
+            marker.setIcon("static/images/pride-pin-lit.png");
         });
 
         marker.addListener("mouseout", () => {
-            marker.setIcon("assets/images/pride-pin-simple.png");
+            marker.setIcon("static/images/pride-pin-simple.png");
         });
 
     };
@@ -194,16 +194,16 @@ function initMap() {
         const marker = new google.maps.Marker({
             position: location,
             map: map,
-            icon: "assets/images/pride-pin-simple.png"
+            icon: "static/images/pride-pin-simple.png"
         });
 
         //change icon to be lit
         marker.addListener("mouseover", () => {
-            marker.setIcon("assets/images/pride-pin-lit.png");
+            marker.setIcon("static/images/pride-pin-lit.png");
         });
 
         marker.addListener("mouseout", () => {
-            marker.setIcon("assets/images/pride-pin-simple.png");
+            marker.setIcon("static/images/pride-pin-simple.png");
         });
 
 
