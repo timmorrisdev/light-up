@@ -3,98 +3,136 @@ function initMap() {
     // map option
 
     var map = new google.maps.Map(document.getElementById("map"), {
-        zoom: 10,
+        zoom: 7,
         center: {
-            lat: 54.6538,
-            lng: -8.1096
+            lat: 53.211231446665835,
+            lng: -8.163598054945362
         },
         //styles for nightmode sourced from https://developers.google.com/maps/documentation/javascript/examples/style-array
-    styles: [
-        { elementType: "geometry", stylers: [{ color: "#242f3e" }] },
-        {
-          elementType: "labels.text.stroke",
-          stylers: [{ color: "#242f3e" }],
-        },
-        {
-          elementType: "labels.text.fill",
-          stylers: [{ color: "#746855" }],
-        },
-        {
-          featureType: "administrative.locality",
-          elementType: "labels.text.fill",
-          stylers: [{ color: "#d59563" }],
-        },
-        {
-          featureType: "poi",
-          elementType: "labels.text.fill",
-          stylers: [{ color: "#d59563" }],
-        },
-        {
-          featureType: "poi.park",
-          elementType: "geometry",
-          stylers: [{ color: "#263c3f" }],
-        },
-        {
-          featureType: "poi.park",
-          elementType: "labels.text.fill",
-          stylers: [{ color: "#6b9a76" }],
-        },
-        {
-          featureType: "road",
-          elementType: "geometry",
-          stylers: [{ color: "#38414e" }],
-        },
-        {
-          featureType: "road",
-          elementType: "geometry.stroke",
-          stylers: [{ color: "#212a37" }],
-        },
-        {
-          featureType: "road",
-          elementType: "labels.text.fill",
-          stylers: [{ color: "#9ca5b3" }],
-        },
-        {
-          featureType: "road.highway",
-          elementType: "geometry",
-          stylers: [{ color: "#746855" }],
-        },
-        {
-          featureType: "road.highway",
-          elementType: "geometry.stroke",
-          stylers: [{ color: "#1f2835" }],
-        },
-        {
-          featureType: "road.highway",
-          elementType: "labels.text.fill",
-          stylers: [{ color: "#f3d19c" }],
-        },
-        {
-          featureType: "transit",
-          elementType: "geometry",
-          stylers: [{ color: "#2f3948" }],
-        },
-        {
-          featureType: "transit.station",
-          elementType: "labels.text.fill",
-          stylers: [{ color: "#d59563" }],
-        },
-        {
-          featureType: "water",
-          elementType: "geometry",
-          stylers: [{ color: "#17263c" }],
-        },
-        {
-          featureType: "water",
-          elementType: "labels.text.fill",
-          stylers: [{ color: "#515c6d" }],
-        },
-        {
-          featureType: "water",
-          elementType: "labels.text.stroke",
-          stylers: [{ color: "#17263c" }],
-        },
-      ],
+        styles: [{
+                elementType: "geometry",
+                stylers: [{
+                    color: "#242f3e"
+                }]
+            },
+            {
+                elementType: "labels.text.stroke",
+                stylers: [{
+                    color: "#242f3e"
+                }],
+            },
+            {
+                elementType: "labels.text.fill",
+                stylers: [{
+                    color: "#746855"
+                }],
+            },
+            {
+                featureType: "administrative.locality",
+                elementType: "labels.text.fill",
+                stylers: [{
+                    color: "#d59563"
+                }],
+            },
+            {
+                featureType: "poi",
+                elementType: "labels.text.fill",
+                stylers: [{
+                    color: "#d59563"
+                }],
+            },
+            {
+                featureType: "poi.park",
+                elementType: "geometry",
+                stylers: [{
+                    color: "#263c3f"
+                }],
+            },
+            {
+                featureType: "poi.park",
+                elementType: "labels.text.fill",
+                stylers: [{
+                    color: "#6b9a76"
+                }],
+            },
+            {
+                featureType: "road",
+                elementType: "geometry",
+                stylers: [{
+                    color: "#38414e"
+                }],
+            },
+            {
+                featureType: "road",
+                elementType: "geometry.stroke",
+                stylers: [{
+                    color: "#212a37"
+                }],
+            },
+            {
+                featureType: "road",
+                elementType: "labels.text.fill",
+                stylers: [{
+                    color: "#9ca5b3"
+                }],
+            },
+            {
+                featureType: "road.highway",
+                elementType: "geometry",
+                stylers: [{
+                    color: "#746855"
+                }],
+            },
+            {
+                featureType: "road.highway",
+                elementType: "geometry.stroke",
+                stylers: [{
+                    color: "#1f2835"
+                }],
+            },
+            {
+                featureType: "road.highway",
+                elementType: "labels.text.fill",
+                stylers: [{
+                    color: "#f3d19c"
+                }],
+            },
+            {
+                featureType: "transit",
+                elementType: "geometry",
+                stylers: [{
+                    color: "#2f3948"
+                }],
+            },
+            {
+                featureType: "transit.station",
+                elementType: "labels.text.fill",
+                stylers: [{
+                    color: "#d59563"
+                }],
+            },
+            {
+                featureType: "water",
+                elementType: "geometry",
+                stylers: [{
+                    color: "#17263c"
+                }],
+            },
+            {
+                featureType: "water",
+                elementType: "labels.text.fill",
+                stylers: [{
+                    color: "#515c6d"
+                }],
+            },
+            {
+                featureType: "water",
+                elementType: "labels.text.stroke",
+                stylers: [{
+                    color: "#17263c"
+                }],
+            },
+        ],
     });
 
     // Create the search box and link it to the UI element.
@@ -156,32 +194,113 @@ function initMap() {
     let people = {
 
         person1: {
-            name: "Dave",
+            name: "Aisling D",
             age: "32",
-            location: "Donegal",
+            location: "Co. Leitrim, Ireland",
             latLng: {
-                lat: 54.6538,
-                lng: -8.1096
+                lat: 54.037546162176724,
+                lng: -7.905421185822573
             }
         },
         person2: {
-            name: "Julie",
+            name: "TonyH",
             age: "28",
-            location: "Trummon East",
+            location: "Tooreen, Co. Mayo, Ireland",
             latLng: {
-                lat: 54.6080634084785,
-                lng: -8.08197415728109
+                lat: 53.830193377683116,
+                lng: -8.764660927901131
             }
         },
         person3: {
-            name: "Tina",
+            name: "LowriP",
             age: "28",
-            location: "Mountcharles",
+            location: "Co. Leitrim, Ireland",
             latLng: {
-                lat: 54.64744128280588,
-                lng: -8.194890581090707
+                lat: 54.289204347384064,
+                lng: -8.27783931866711
             }
-        }
+        },
+
+        person4: {
+            name: "RickyH",
+            location: "Sligo",
+            latLng: {
+                lat: 54.27639276879619,
+                lng: -8.476524425305202
+            }
+        },
+
+        person5: {
+            name: "HabibB",
+            location: "Leitir Ceanainn, Co. Donegal, Ireland",
+            latLng: {
+                lat: 54.956011798643665,
+                lng: -7.734160636185547
+            }
+        },
+
+        person6: {
+            name: "Tori Smith",
+            location: "Coolmore, Co. Donegal, Ireland",
+            latLng: {
+                lat: 54.54474373153263,
+                lng: -8.213895096483197
+            }
+        },
+
+        person7: {
+            name: "Mathilde Deasun",
+            location: "Terhillion, Co. Donegal, Ireland",
+            latLng: {
+                lat: 54.63092342457369,
+                lng: -8.212174596441933
+            }
+        },
+
+        person8: {
+            name: "Jamaal Caito",
+            location: "Westport, Co. Mayo, Ireland",
+            latLng: {
+                lat: 53.80208666939831,
+                lng: -9.514825962010342
+            }
+        },
+
+        person9: {
+            name: "Rebekka Roberts",
+            location: "Tralee, Co. Kerry, Ireland",
+            latLng: {
+                lat: 52.271593487410236,
+                lng: -9.700499985033886
+            }
+        },
+
+        person10: {
+            name: "John Sulzbach",
+            location: "Skibbereen, Co. Cork, Ireland",
+            latLng: {
+                lat: 51.55632381045682,
+                lng: -9.262087405833633
+            }
+        },
+
+        person11: {
+            name: "Anto_Bilic",
+            location: "Monmouth, Monmouthshire, South East Wales",
+            latLng: {
+                lat: 51.81265847852813,
+                lng: -2.716038360087779
+            }
+        },
+
+        person12: {
+            name: "TanjaBerger",
+            location: "Ribble Valley, Lancashire",
+            latLng: {
+                lat: 53.892847440782276,
+                lng: -2.448580142359242
+            }
+        },
 
     };
 
@@ -193,12 +312,13 @@ function initMap() {
         const marker = new google.maps.Marker({
             position: location,
             map: map,
-            icon: "static/images/pride-pin-simple.png"
+            icon: "static/images/pride-pin-simple.png",
         });
 
         //change icon to be lit
         marker.addListener("mouseover", () => {
             marker.setIcon("static/images/pride-pin-lit.png");
+
         });
 
         marker.addListener("mouseout", () => {
@@ -208,9 +328,11 @@ function initMap() {
     };
 
     for (let i in people) {
-        addMarker(people[i].latLng)
+
+        addMarker(people[i].latLng);
 
     };
+
 
     //event data
 
