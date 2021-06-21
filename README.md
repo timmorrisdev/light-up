@@ -2,7 +2,7 @@
 
 ![Various Devices](https://github.com/TimMorrisDev/light-up/blob/master/static/wire/wire.JPG)
 
-### [Live Site](light-up-pride.herokuapp.com/)
+### [Live Site](https://light-up-pride.herokuapp.com/)
 
 ### [GitHub](https://github.com/TimMorrisDev/light-up)
 
