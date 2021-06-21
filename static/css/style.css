@@ -18,9 +18,15 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Quicksand', sans-serif;
+/*---------------------------------------------------Dark*/
+body {
+  background: rgb(10, 27, 44);
+  color: white;
 }
+.list-group-item {
+  color: rgb(24, 24, 26);
+}
+
 
 /*---------------------------------------------------Font*/
 h1,h2,h3,h4,h5,h6 {
@@ -66,9 +72,7 @@ h1,h2,h3,h4,h5,h6 {
 
 /*---------------------------------------------------Logo*/
 
-h1 {
-  font-family: 'Quicksand', sans-serif;
-  }
+
   
 .logo-buttons {
   width: 100%;
@@ -85,8 +89,8 @@ h1 {
 }
 
 #logo {
-    -webkit-filter: drop-shadow( 0px 0px 1px #DD0303);
-    filter: drop-shadow( 0px 0px 1px #DD0303);
+    -webkit-filter: drop-shadow( 0px 0px 5px #DD0303);
+    filter: drop-shadow( 0px 0px 5px #DD0303);
   }
 
 #logo:hover{
@@ -156,9 +160,15 @@ h1 {
     }
 }
 
-/*Color Radio Buttons*/
+@media (min-width: 576px) {
+  #logo {
+    width: 240px;
+    height: 60px;
+}
+}
+
+/*Color Radio Buttons------------------------------------*/
 /*radio buttons modified from w3schools article @ https://www.w3schools.com/howto/howto_css_custom_checkbox.asp*/
-/*!important used to override color settings on various states*/
 .toggle-container {
     padding: 1rem;
 }
@@ -381,6 +391,9 @@ h1 {
     font-size: 1.2rem;
     font-weight: bold;
 }
+.navbar-toggler {
+  border: 2px solid !important;
+}
 
 /**---------------------------------------------------Hero Image**/
 .hero-image{
@@ -432,6 +445,7 @@ h1 {
 
 .card-title{
   text-align: center;
+  color: black;
 }
 /**---------------------------------------------------Modal**/
 .modal-header, .modal-footer{
@@ -440,8 +454,8 @@ background: url(../images/rainbow-background1.jpeg)
 
 /**---------------------------------------------------Footer**/
 footer{
-  height: 20vh;
-  background-color: antiquewhite;
+  /* height: 20vh; */
+  /* background-color: antiquewhite; */
   display: flex;
   align-items: center;
   text-align: center;
@@ -471,7 +485,7 @@ footer{
 
 .code-group-about p{
   font-size: 1.5rem;
-  color: black;
+  /* color: black; */
   text-align: center;
 }
 
@@ -510,9 +524,20 @@ footer{
 }
 
 .hint-text {
-    color: #495057;
+    color: snow;
     font-size: 0.8rem;
     margin-top: 10px;
+}
+
+.form-card label {
+    color: white;
+}
+
+.form-card {
+    width: 100%;
+    background-color: #232f3a;
+    border: none;
+    color: white;
 }
 
 /*---------------------------------------------------Footer*/
@@ -568,8 +593,4 @@ footer{
 
 .card {
     display: inline-block;
-}
-
-.form-card {
-    width: 100%
 }
