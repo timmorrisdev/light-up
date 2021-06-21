@@ -429,7 +429,7 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 .events-box{
-  border: 1px solid black;
+  border: 3px solid;
   border-radius: 5px;
   height: 30%;
   overflow: hidden;
@@ -438,7 +438,7 @@ h1,h2,h3,h4,h5,h6 {
 
 .card{
   margin: 10px auto;
-  border: 1px solid black;
+  border: 3px solid;
   line-height: normal;
   box-shadow: 5px 5px 15px gray;
 }
@@ -485,7 +485,6 @@ footer{
 
 .code-group-about p{
   font-size: 1.5rem;
-  /* color: black; */
   text-align: center;
 }
 

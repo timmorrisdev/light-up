@@ -1,18 +1,18 @@
 {% extends "base.html" %}
 {% block content %}
 <section>
-    <div class="code-group-about color red">
-        <h1>Connect with coders in your area.</h1>
+    <div class="code-group-about">
+        <h1 class=" color red">Connect with coders in your area.</h1>
         <p>There are so many benfits to connecting with like minded people in your area. <em>Learning</em>,
             <em>Developing</em> and <em>Laughing</em> together can help build friendships which will last a lifetime.
         </p>
-        <h2>Here are some Coders in your area that would love to connect.</h2>
+        <h2 class=" color red">Here are some Coders in your area that would love to connect.</h2>
     </div>
             <div class="container profile-container">
                 <div class="row">
                     {% for user in users %}
                     <div class="col-12 col-md-6 col-lg-4">
-                        <div class="card pt-4" style="width: 20rem;">
+                        <div class="card pt-4 color red" style="width: 20rem;">
                             <div class="col-10 card-img-centered" style="background-image: url('{{ user.image }}')">
                             </div>
                             <div class="card-body">
