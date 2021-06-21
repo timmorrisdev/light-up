@@ -11,9 +11,6 @@
 
 body {
     height: 100vh;
-    /* background: url(../images/rainbow-background1.jpeg) no-repeat
-    center center fixed;
-    background-size: cover; */
     height: 100vh; 
     font-family: 'Montserrat', sans-serif;
 }
@@ -471,6 +468,16 @@ footer{
   text-align: center;
 }
 
+.event-cards {
+  display: flex;
+}
+
+@media (min-width: 576px) {
+  .event-cards {
+    min-height: 615px;
+  }
+}
+
 /**---------------------------------------------------Code Group**/
 .code-group-about{
   margin-top: 2rem;
@@ -514,6 +521,16 @@ footer{
     padding: 5px 46px;
     background-position: center center;
     background-size: 18rem;
+}
+
+.profile-cards {
+  display: flex;
+}
+
+@media (min-width: 576px) {
+  .profile-cards {
+    min-height: 860px;
+  }
 }
 
 /*---------------------------------------------------Forms & Buttons*/
