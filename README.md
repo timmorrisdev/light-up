@@ -49,7 +49,7 @@ Light Up is Team 5's entry for the [Code Institute](https://codeinstitute.net/) 
 
 # Project Overview
 
-![AmIResponsive](static/images/responsive.png)
+![Various Devices](https://github.com/TimMorrisDev/light-up/blob/master/static/wire/wire.JPG)
 
 ---
 
@@ -79,23 +79,21 @@ A standard layout that is fully responsive on mobile devices and larger screens.
 
 #### Color Scheme
 
-![Color Palette]()
+![Color Palette](https://github.com/TimMorrisDev/light-up/blob/master/static/wire/colors.JPG)
 
 
 #### Typography
 
-We choose [Quicksilver](https://fonts.google.com/specimen/Quicksand?query=quicks) because it suits colorful bright headers <br />
+We choose [Quicksand](https://fonts.google.com/specimen/Quicksand?query=quicks) because it suits colorful bright headers <br />
 and [Montserrat](https://fonts.google.com/specimen/Montserrat?query=montser) for the body because it is very easy to read.
 
 #### Media
-
-![AmIResponsive](static/wire/wire.JPG)
 
 Icons, map pins and favicon created by the team using [Affinity Designer](https://affinity.serif.com/en-us/)
 
 #### Wireframes
 
-![AmIResponsive]()
+![Various Devices](https://github.com/TimMorrisDev/light-up/blob/master/static/wire/wire.JPG)
 
 
 
